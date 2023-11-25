@@ -1,0 +1,4 @@
+media/*
+*.pyc
+venv/*
+core/Private.py
