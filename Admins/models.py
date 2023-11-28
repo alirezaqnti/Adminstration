@@ -1,3 +1,4 @@
+from django.contrib.auth.models import User
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 from mptt.models import MPTTModel, TreeForeignKey
@@ -6,7 +7,7 @@ from Main.models import Address, BaseModel
 from Main.views import RandInt, RandString
 
 
-class Personel(BaseModel):
+class Personel(User):
     Fabulous = '1'
     Happy = "2"
     Normal = "3"
@@ -44,11 +45,8 @@ class Personel(BaseModel):
     ]
 
     SPE = models.CharField(_("کد پرسنلی"), max_length=15,blank=True,null=True,unique=True)
-    FirstName = models.CharField(_("نام"), max_length=50)
-    LastName = models.CharField(_("نام خانوادگی"), max_length=50)
     Phone = models.CharField(_("شماره همراه"), max_length=13)
     NationalID = models.CharField(_("کد ملی"), max_length=10)
-    Email = models.EmailField(_("ایمیل"), max_length=254)
     Address = models.ForeignKey(Address, verbose_name=_("آدرس"), on_delete=models.CASCADE)
     Team = models.ForeignKey("Team", verbose_name=_("تیم"), on_delete=models.CASCADE,blank=True,null=True)
     JobTitle = models.CharField(_("عنوان شغلی"), max_length=100)
@@ -57,12 +55,12 @@ class Personel(BaseModel):
     Mood = models.CharField(_("مود رفتاری"), max_length=20,default=OK,choices=MOOD_CHOICE)
     Joined = models.DateField(_("تاریخ شروع همکاری"), auto_now_add=False)
     Left = models.DateField(_("تاریخ پایان همکاری"), auto_now_add=False)
-    class Meta(BaseModel.Meta):
+    class Meta(User.Meta):
         verbose_name = _("Personel")
         verbose_name_plural = _("Personels")
     
     def __str__(self):
-        return self.FirstName + self.LastName
+        return self.first_name + self.last_name
     
     def save(self,*args, **kwargs):
         if not self.pk:

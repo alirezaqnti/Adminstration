@@ -3,7 +3,6 @@ from mptt.admin import MPTTModelAdmin
 
 from .models import *
 
-OffDayRequest
 
 @admin.register(Personel)
 class PersonelAdmin(admin.ModelAdmin):
@@ -11,8 +10,6 @@ class PersonelAdmin(admin.ModelAdmin):
 
     list_display = [
         'SPE',
-        'FirstName',
-        'LastName',
         'Phone',
         'Team',
         'JobTitle',
@@ -21,13 +18,10 @@ class PersonelAdmin(admin.ModelAdmin):
     
     search_fields = [
         'SPE',
-        'FirstName',
-        'LastName',
         'Phone',
         'Team.ST',
         'JobTitle',
     ]
-    ordering = ('Created','Modified',)
 
 
 @admin.register(Team)
