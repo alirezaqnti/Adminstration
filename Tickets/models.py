@@ -34,7 +34,7 @@ class Ticket(BaseModel):
 
 
     STK = models.CharField(_("کد تیکت"), max_length=15,blank=True,null=True,unique=True)
-    Team = models.ForeignKey("Admins.Team", verbose_name=_("تیم"), on_delete=models.CASCADE,blank=True,null=True)
+    Team = models.ForeignKey("Admins.Team", verbose_name=_("تیم"), on_delete=models.CASCADE,blank=True,null=True,related_name='ticket_team')
     Personel = models.ForeignKey('Admins.Personel', verbose_name=_("پرسنل"), on_delete=models.CASCADE,blank=True,null=True)
     User = models.IntegerField(_("خریدار"),default=0)
     Provider = models.IntegerField(_("فروشنده"),default=0)

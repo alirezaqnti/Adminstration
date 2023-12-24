@@ -7,7 +7,7 @@ from .views import RandInt, RandString
 class BaseModel(models.Model):
     Created = models.DateTimeField(auto_now_add=True)
     Modified = models.DateTimeField(auto_now=True)
-
+    Active = models.BooleanField(_("فعال"),default=True)
     class Meta:
         abstract = True
         ordering = ['Created']
@@ -44,7 +44,6 @@ class Address(BaseModel):  # جدول مربوط به ادرس های کاربر
     PostalCode = models.CharField(_("کد پستی"), max_length=10)  # کد پستی
     Number = models.CharField(_("پلاک"), max_length=4)  # پلاک
     Unit = models.CharField(_("واحد"), max_length=5, blank=True)  # واحد
-    Active = models.BooleanField(_("فعال"), default=True)
 
     class Meta:
         verbose_name_plural = "آدرس"
@@ -79,7 +78,7 @@ class Questonnair(BaseModel):
     DefaultForm = models.TextField(_("فرم پیشفرض"))
     Creator = models.ForeignKey("Admins.Personel", verbose_name=_("ایجاد کننده"), on_delete=models.CASCADE)
     DeadLine = models.DateTimeField(_("ددلاین"), auto_now_add=False,blank=True,null=True)
-    Team = models.ForeignKey("Admins.Team", verbose_name=_("تیم"), on_delete=models.CASCADE,blank=True,null=True)
+    Team = models.ForeignKey("Admins.Team", verbose_name=_("تیم"), on_delete=models.CASCADE,blank=True,null=True,related_name='ques_team')
     Type = models.CharField(_("نوع"), max_length=50,default=POLL,choices=TYPE_CHOICE)
 
 

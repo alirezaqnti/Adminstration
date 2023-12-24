@@ -1,4 +1,5 @@
-from django.contrib.auth.models import User
+import jdatetime
+from django.contrib.auth.models import Group, Permission, User
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 from mptt.models import MPTTModel, TreeForeignKey
@@ -47,14 +48,17 @@ class Personel(User):
     SPE = models.CharField(_("کد پرسنلی"), max_length=15,blank=True,null=True,unique=True)
     Phone = models.CharField(_("شماره همراه"), max_length=13)
     NationalID = models.CharField(_("کد ملی"), max_length=10)
-    Address = models.ForeignKey(Address, verbose_name=_("آدرس"), on_delete=models.CASCADE)
-    Team = models.ForeignKey("Team", verbose_name=_("تیم"), on_delete=models.CASCADE,blank=True,null=True)
-    JobTitle = models.CharField(_("عنوان شغلی"), max_length=100)
-    # Access = 
+    Address = models.ForeignKey(Address, verbose_name=_("آدرس"), on_delete=models.CASCADE,blank=True,null=True)
+    Team = models.ForeignKey("Team", verbose_name=_("تیم"), on_delete=models.CASCADE,blank=True,null=True,related_name='pers_team')
+    JobTitle = models.CharField(_("عنوان شغلی"), max_length=100,blank=True,null=True)
     Status = models.CharField(_("وضعیت"), max_length=20,default=New,choices=STATUS_CHOICE)
     Mood = models.CharField(_("مود رفتاری"), max_length=20,default=OK,choices=MOOD_CHOICE)
-    Joined = models.DateField(_("تاریخ شروع همکاری"), auto_now_add=False)
-    Left = models.DateField(_("تاریخ پایان همکاری"), auto_now_add=False)
+    Joined = models.DateField(_("تاریخ شروع همکاری"), auto_now_add=False,blank=True,null=True)
+    Left = models.DateField(_("تاریخ پایان همکاری"), auto_now_add=False,blank=True,null=True)
+
+
+
+    USERNAME_FIELD = "Phone"
     class Meta(User.Meta):
         verbose_name = _("Personel")
         verbose_name_plural = _("Personels")
@@ -74,7 +78,7 @@ class Team(BaseModel,MPTTModel):
             "self", on_delete=models.CASCADE, null=True, blank=True, related_name="children"
     )
     Description = models.TextField(_("توضیحات"),max_length=600)
-    # Access = 
+    Access = models.ForeignKey(Group, verbose_name=_("دسترسی"), on_delete=models.CASCADE,blank=True,null=True)
 
     class Meta(BaseModel.Meta):
         verbose_name = 'Team'
@@ -88,6 +92,19 @@ class Team(BaseModel,MPTTModel):
             self.ST = RandInt('ST')
         super(Team, self).save(*args, **kwargs)
 
+    def toJson(self):
+        P = self.parent.Name if self.parent != None else '-'
+        A = self.Access.name if self.Access != None else '-'
+        D = jdatetime.date.fromgregorian(date=self.Created)
+        return {
+            'ST': self.ST,
+            'Name': self.Name,
+            'Parent': P,
+            'Description': self.Description,
+            'Access': A,
+            'Active': str(self.Active),
+            'Created': str(D)
+        }
 class OffDayRequest(BaseModel):
     New = '1'
     Progress = '2'

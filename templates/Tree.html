@@ -1,0 +1,46 @@
+{% extends 'Master.html' %}
+{% load static %}
+{% block head %}
+<!-- <script src="{% static 'plugins/Bubble-Tree/core.js' %}"></script>
+    <script src="{% static 'plugins/Bubble-Tree/charts.js' %}"></script>
+    <script src="{% static 'plugins/Bubble-Tree/bullets.js' %}"></script> -->
+<link rel="stylesheet" href="{% static 'plugins/Bubble-Tree/style.css' %}">
+<script src="{% static 'plugins/Bubble-Tree/index.js' %}"></script>
+<script src="{% static 'plugins/Bubble-Tree/hierarchy.js' %}"></script>
+<script src="{% static 'plugins/Bubble-Tree/animated.js' %}"></script>
+<!-- <script src="{% static 'plugins/Bubble-Tree/forceDirected.js' %}"></script> -->
+{% endblock head %}
+
+
+
+{% block content %}
+<div id="content" class="main-content">
+    <div class="layout-px-spacing">
+
+        <div class="row layout-top-spacing">
+            <div class="col-xl-12 col-lg-12 col-sm-12  layout-spacing">
+                <div id="chartdiv"></div>
+
+            </div>
+
+        </div>
+        <div class="footer-wrapper">
+            <div class="footer-section f-section-1">
+                <p class=""> © کپی رایت</p>
+            </div>
+            <div class="footer-section f-section-2">
+                <span class="copyright"> بومی سازی شده توسط : <a href="https://imanpa.ir/store/"> ایمان پاکروح </a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
+
+
+
+{% block js %}
+
+<script src="{% static 'plugins/Bubble-Tree/script.js' %}"></script>
+
+{% endblock js %}

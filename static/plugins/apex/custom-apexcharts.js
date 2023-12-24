@@ -1,3 +1,12 @@
+Apex.grid = {
+    borderColor: '#191e3a'
+}
+Apex.track = {
+    background: '#0e1726',
+}
+Apex.tooltip = {
+    theme: 'dark'
+}
 // Simple Line
 
 var sline = {
@@ -28,7 +37,7 @@ var sline = {
   },
   grid: {
     row: {
-      colors: ['#f1f2f3', 'transparent'], // takes an array which will be repeated on columns
+      colors: ['#3b3f5c', 'transparent'], // takes an array which will be repeated on columns
       opacity: 0.5
     },
   },
@@ -40,6 +49,7 @@ var sline = {
       offsetX: -20,
     }
   }
+
 }
 
 var chart = new ApexCharts(
@@ -78,15 +88,15 @@ var sLineArea = {
         type: 'datetime',
         categories: ["2018-09-19T00:00:00", "2018-09-19T01:30:00", "2018-09-19T02:30:00", "2018-09-19T03:30:00", "2018-09-19T04:30:00", "2018-09-19T05:30:00", "2018-09-19T06:30:00"],                
     },
-    yaxis: {
-        labels: {
-          offsetX: -20,
-        }
-    },
     tooltip: {
         x: {
             format: 'dd/MM/yy HH:mm'
         },
+    },
+    yaxis: {
+        labels: {
+          offsetX: -20,
+        }
     }
 }
 
@@ -136,6 +146,9 @@ var sCol = {
         title: {
             text: '$ (thousands)',
             offsetX: -95,
+            style: {
+                color: '#bfc9d4',
+            }
         },
         labels: {
           offsetX: -20,
@@ -302,13 +315,12 @@ var options = {
       offsetX: -60,
       offsetY: 0,
       style: {
-         color: '#191e3a',
+         color: '#e0e6ed',
       }
     },
     labels: {
       offsetX: -20,
     }
-
   }, {
     opposite: true,
     title: {
@@ -336,6 +348,9 @@ var donutChart = {
         toolbar: {
           show: false,
         }
+    },
+    stroke: {
+      colors: '#0e1726'
     },
     series: [44, 55, 41, 17],
     responsive: [{
@@ -390,7 +405,7 @@ var radialChart = {
         }
     },
     series: [44, 55, 67, 83],
-    labels: ['Apples', 'Oranges', 'Bananas', 'Berries'],    
+    labels: ['Apples', 'Oranges', 'Bananas', 'Berries'],
 }
 
 var chart = new ApexCharts(

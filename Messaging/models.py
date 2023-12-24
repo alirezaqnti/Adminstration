@@ -14,7 +14,7 @@ class ChatThread(BaseModel):
         (GROUP,'گروهی'),
     ]
     SCT = models.CharField(_("کد چت"), max_length=15,blank=True,null=True,unique=True)
-    Team = models.ForeignKey("Admins.Team", verbose_name=_("تیم"), on_delete=models.CASCADE,blank=True,null=True)
+    Team = models.ForeignKey("Admins.Team", verbose_name=_("تیم"), on_delete=models.CASCADE,blank=True,null=True,related_name='thread_team')
     Type = models.CharField(_("نوع"), max_length=50,default=P2P,choices=TYPE_CHOICE)
 
     class Meta(BaseModel.Meta):

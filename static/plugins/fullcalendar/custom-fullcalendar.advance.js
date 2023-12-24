@@ -202,7 +202,7 @@ $(document).ready(function() {
             {
                 id: 'event-9',
                 title: 'برای ستون شاپ کلیک کنید',
-                url: 'http://designreset.com/',
+                url: 'https://sotonshop.ir',
                 start: newDate.getFullYear() + '-'+ getDynamicMonth('default') +'-27T20:00:00',
                 end: newDate.getFullYear() + '-'+ getDynamicMonth('default') +'-28T20:00:00',
                 className: "bg-success",

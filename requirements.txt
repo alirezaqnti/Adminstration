@@ -13,6 +13,7 @@ django-colorfield==0.10.1
 django-cors-headers==4.1.0
 django-crontab==0.7.1
 django-dbbackup==4.0.2
+django-filter==23.4
 django-jalali==6.0.1
 django-jalali-date==1.0.2
 django-js-asset==2.0.0
@@ -21,6 +22,7 @@ django-redis==5.4.0
 django-referrer-policy==1.0
 django_debug_toolbar==3.8.1
 djangorestframework==3.14.0
+fontawesome-free==5.15.4
 idna==3.5
 importlib-metadata==6.7.0
 isodate==0.6.1

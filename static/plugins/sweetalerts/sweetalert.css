@@ -38,7 +38,7 @@ body.swal2-iosfix {
     background-color: rgba(0, 0, 0, 0.4); }
 
 .swal2-modal {
-  background-color: #fff;
+  background-color: #0e1726 !important;
   border-radius: 5px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -54,7 +54,7 @@ body.swal2-iosfix {
   .swal2-modal.swal2-loading {
     overflow-y: hidden; }
   .swal2-modal .swal2-title {
-    color: #3b3f5c !important;
+    color: #bfc9d4 !important;
     font-size: 24px !important;
     text-align: center;
     font-weight: normal;
@@ -173,12 +173,15 @@ body.swal2-iosfix {
 
 .swal2-modal .swal2-input, .swal2-modal .swal2-file, .swal2-modal .swal2-textarea {
   height: auto;
+  border: 1px solid #1b2e4b !important;
+  color: #25d5e4;
   font-size: 15px;
   padding: 8px 10px;
   letter-spacing: 1px;
   height: calc(1.4em + 1.4rem + 2px);
   padding: .75rem 1.25rem;
-  border-radius: 6px; }
+  border-radius: 6px;
+  background: #1b2e4b; }
 
 pre {
   color: #009688; }
@@ -332,7 +335,7 @@ pre {
   user-select: none; }
   .swal2-icon.swal2-error {
     border-color: #e7515a !important;
-    border: 5px solid #f1f2f3 !important;
+    border: 5px solid #1b2e4b !important;
     box-shadow: 0px 3px 25px 0px rgba(113, 106, 202, 0.2); }
     .swal2-icon.swal2-error .swal2-x-mark {
       position: relative;
@@ -356,26 +359,26 @@ pre {
   .swal2-icon.swal2-warning {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     color: #ffbb44 !important;
-    border: 5px solid #f1f2f3 !important;
-    box-shadow: 0px 3px 25px 0px rgba(113, 106, 202, 0.2);
+    border: solid 5px #1b2e4b !important;
+    box-shadow: 0px 9px 20px 0px rgba(25, 30, 58, 0.35);
     font-size: 60px;
     line-height: 80px;
     text-align: center; }
   .swal2-icon.swal2-info {
     font-family: 'Open Sans', sans-serif;
-    color: #1b55e2 !important;
-    border: 5px solid #f1f2f3 !important;
-    box-shadow: 0px 3px 25px 0px rgba(113, 106, 202, 0.2);
+    color: #506690 !important;
+    border: solid 5px #1b2e4b !important;
+    box-shadow: 0px 9px 20px 0px rgba(25, 30, 58, 0.35);
     font-size: 60px;
     line-height: 80px;
     text-align: center; }
   .swal2-icon.swal2-question {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    color: #5c1ac3 !important;
-    border: 5px solid #f1f2f3 !important;
-    box-shadow: 0px 3px 25px 0px rgba(113, 106, 202, 0.2);
+    color: #506690 !important;
+    border: solid 5px #1b2e4b !important;
     border-color: none !important;
-    text-align: center; }
+    text-align: center;
+    box-shadow: 0px 9px 20px 0px rgba(25, 30, 58, 0.35); }
   .swal2-icon:not(.swal2-animate-error-icon):not(.swal2-animate-success-icon) {
     width: 2em !important;
     line-height: 119px !important;
@@ -416,8 +419,7 @@ pre {
   .swal2-icon.swal2-success .swal2-success-ring {
     width: 80px;
     height: 80px;
-    border: 5px solid #f1f2f3 !important;
-    box-shadow: 0px 3px 25px 0px rgba(113, 106, 202, 0.2);
+    border: 5px solid #1b2e4b !important;
     border-radius: 50%;
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
@@ -436,7 +438,7 @@ pre {
     transform: rotate(-45deg); }
   .swal2-icon.swal2-success [class^='swal2-success-line'] {
     height: 5px;
-    background-color: #25d5e4 !important;
+    background-color: #009688 !important;
     display: block;
     border-radius: 2px;
     position: absolute;
@@ -475,9 +477,9 @@ pre {
     .swal2-progresssteps .swal2-progresscircle:last-child {
       margin-right: 0; }
     .swal2-progresssteps .swal2-progresscircle.swal2-activeprogressstep {
-      background: #25d5e4 !important; }
+      background: #191e3a !important; }
       .swal2-progresssteps .swal2-progresscircle.swal2-activeprogressstep ~ .swal2-progresscircle, .swal2-progresssteps .swal2-progresscircle.swal2-activeprogressstep ~ .swal2-progressline {
-        background: #ebedf2 !important; }
+        background: #506690 !important; }
   .swal2-progresssteps .swal2-progressline {
     background: #1b55e2;
     height: .4em;

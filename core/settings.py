@@ -5,6 +5,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 import os
+import sys
 
 SECRET_KEY = str(os.getenv("SECRET_KEY"))
 
@@ -17,6 +18,7 @@ try:
 except:
     DEBUG = True
 
+sys.modules['fontawesome_free'] = __import__('fontawesome-free')
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -28,6 +30,7 @@ INSTALLED_APPS = [
     "rest_framework",
     "rest_framework.authtoken",
     # "django_filters",
+    'fontawesome_free',
     "ckeditor",
     "ckeditor_uploader",
     "debug_toolbar",
@@ -66,6 +69,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'Main.context_processors.Con',
             ],
         },
     },
@@ -104,6 +108,9 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+LOGIN_URL = '/login/'
+
+LOGOUT_REDIRECT_URL = '/login/'
 
 if DEBUG:
     ALLOWED_HOSTS = ['127.0.0.1']

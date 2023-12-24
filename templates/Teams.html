@@ -1,0 +1,183 @@
+{% extends 'Master.html' %}
+{% load static %}
+
+
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{% static 'plugins/table/datatable/datatables.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'plugins/table/datatable/dt-global_style.css' %}">
+{% endblock head %}
+
+{% block content %}
+
+
+
+<!--  BEGIN CONTENT AREA  -->
+<div id="content" class="main-content">
+    <div class="layout-px-spacing">
+
+        <div class="row layout-top-spacing">
+            <div class="col-xl-12 col-lg-12 col-sm-12  layout-spacing">
+                <div class="widget-content widget-content-area br-6">
+                    <div class="table-responsive mb-4 mt-4">
+                        <table id="alter_pagination" class="table table-hover" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th> # </th>
+                                    <th>کد تیم</th>
+                                    <th>نام</th>
+                                    <th> زیرمجموعه </th>
+                                    <th> تاریخ ایجاد </th>
+                                    <th class="text-center">عمل</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for item in TEAMS %}
+                                <tr>
+                                    <td>{{forloop.counter}}</td>
+                                    <td>{{item.ST}}</td>
+                                    <td>{{item.Name}}</td>
+                                    <td>{{item.Parent}}</td>
+                                    <td>{{item.Created}}</td>
+                                    <td class="text-center">
+                                        <a href="javascript:void(0);" class="bs-tooltip" data-toggle="tooltip"
+                                            data-placement="top" title="" data-original-title="حذف">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="feather feather-x-octagon table-cancel">
+                                                <polygon
+                                                    points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2">
+                                                </polygon>
+                                                <line x1="15" y1="9" x2="9" y2="15"></line>
+                                                <line x1="9" y1="9" x2="15" y2="15"></line>
+                                            </svg>
+                                        </a>
+                                    </td>
+                                </tr>
+
+                                {% endfor %}
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="footer-wrapper">
+        <div class="footer-section f-section-1">
+            <p class=""> © کپی رایت</p>
+        </div>
+        <div class="footer-section f-section-2">
+            <span class="copyright"> بومی سازی شده توسط : <a href="https://imanpa.ir/store/"> ایمان پاکروح </a> </span>
+        </div>
+    </div>
+</div>
+<!--  END CONTENT AREA  -->
+
+
+<div class="modal fade" id="NewTeamModal" tabindex="-1" role="dialog" aria-labelledby="NewTeamModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="NewTeamModalLabel">عنوان معین</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="" method="post" class="NewTeamForm">
+                    {% csrf_token %}
+                    {{Form.as_p}}
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn" data-dismiss="modal"><i class="flaticon-cancel-12"></i>لغو</button>
+                <button type="button" class="btn btn-primary NewTeamButt">ثبت</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
+
+{% block js %}
+
+<script src="{% static 'plugins/table/datatable/datatables.js' %}"></script>
+<script>
+    $(document).ready(function () {
+        var t = $('#alter_pagination').DataTable({
+            // 'dom': 'Bfrtip',
+            "pagingType": "full_numbers",
+            "oLanguage": {
+                "oPaginate": {
+                    "sFirst": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>',
+                    "sPrevious": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>',
+                    "sNext": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>',
+                    "sLast": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-left"><polyline points="15 18 9 12 15 6"></polyline></svg>'
+                },
+                "sInfo": "صفحه _PAGE_ از _PAGES_",
+                "sSearch": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>',
+                "sSearchPlaceholder": "جستجو کنید...",
+                "sLengthMenu": "نتایج :  _MENU_",
+            },
+            "stripeClasses": [],
+            "lengthMenu": [7, 10, 20, 50],
+            "pageLength": 7,
+
+        });
+    });
+</script>
+{% with user.get_user_group_names as GRPS %}
+
+{% if 'super' in GRPS %}
+<script>
+    $(document).ready(function () {
+        let row = $('#alter_pagination_wrapper .row .col-md-6 .dataTables_filter')
+        $(row).prepend(
+            `<label>
+                    <button name="alter_pagination_btn" class="alter_pagination_btn btn btn-dark ADDTeam"><i class="fas fa-plus"></i></button>
+                </label>
+        `)
+    });
+    $('label[for="id_parent"]').html('والد:')
+    $('#id_parent').addClass('form-control')
+    $('#id_Access').addClass('form-control')
+</script>
+{% endif %}
+{% endwith %}
+
+<script>
+    $('body').on('click', '.ADDTeam', function (e) {
+        e.preventDefault();
+        $('#NewTeamModal').modal('show')
+    });
+    $('.NewTeamButt').click(async function (e) {
+        e.preventDefault();
+        let f = $(".NewTeamForm")
+        let form = new FormData(f[0])
+        let res = await fetch('/admins/new-team-register/', {
+            method: 'post',
+            body: form,
+
+        })
+        let info = await res.json()
+        console.log(info)
+        if (info.stat = 200) {
+            let data = GetTeamData()
+            console.log(data)
+            window.location.reload()
+        }
+
+    });
+    GetTeamData = async function () {
+        let res = await fetch('/admins/get-team-data/')
+        let info = await res.json()
+        console.log(info)
+        return info
+    }
+</script>
+
+
+{% endblock js %}

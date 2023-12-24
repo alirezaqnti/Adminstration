@@ -38,7 +38,7 @@ class Task(TaskBaseModel):
     STA = models.CharField(_("شماره تسک"), max_length=15,blank=True,null=True,unique=True)
     Owner = models.ForeignKey("Admins.Personel", verbose_name=_("کارفرما"), on_delete=models.CASCADE,related_name='owner_pers')
     Assigned_To = models.ForeignKey("Admins.Personel", verbose_name=_("محول شده"), on_delete=models.CASCADE,blank=True,null=True,related_name='assign_pers')
-    Team = models.ForeignKey("Admins.Team", verbose_name=_("تیم"), on_delete=models.CASCADE,blank=True,null=True)
+    Team = models.ForeignKey("Admins.Team", verbose_name=_("تیم"), on_delete=models.CASCADE,blank=True,null=True,related_name='task_team')
     
 
     class Meta(BaseModel.Meta):

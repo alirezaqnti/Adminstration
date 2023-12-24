@@ -13,14 +13,16 @@ select.bs-select-hidden, select.selectpicker {
 
 .bootstrap-select {
   width: 220px \0; }
+  .bootstrap-select .dropdown-divider {
+    border-color: #191e3a; }
   .bootstrap-select.btn-group > .dropdown-toggle {
     height: auto;
-    border: 1px solid #bfc9d4;
-    color: #3b3f5c !important;
+    border: 1px solid #1b2e4b;
+    color: #009688;
     font-size: 15px;
     padding: 8px 10px;
     letter-spacing: 1px;
-    background-color: #fff;
+    background-color: #1b2e4b;
     height: auto;
     padding: .75rem 1.25rem;
     border-radius: 6px;
@@ -60,8 +62,8 @@ select.bs-select-hidden, select.selectpicker {
   width: 220px; }
 
 .bootstrap-select.show .dropdown-toggle {
-  border: 1px solid #1b55e2 !important;
-  box-shadow: 0 0 5px 2px rgba(194, 213, 255, 0.619608);
+  border: 1px solid #3b3f5c !important;
+  /*box-shadow: 0 0 5px 2px rgba(194, 213, 255, 0.6196078431372549);*/
   color: #3b3f5c; }
   .bootstrap-select.show .dropdown-toggle.btn-outline-primary {
     border: 1px solid #1b55e2 !important; }
@@ -130,16 +132,18 @@ select.bs-select-hidden, select.selectpicker {
   .bootstrap-select.btn-group.bs-container .dropdown-menu {
     z-index: 1060; }
 
-.bootstrap-select.btn-group .dropdown-toggle .filter-option {
+.bootstrap-select.btn-group .dropdown-toggle:not(.custom-styling) .filter-option {
   display: inline-block;
-  text-align: right; }
+  text-align: right;
+  color: #009688; }
 
 .bootstrap-select.btn-group .dropdown-toggle .caret {
   position: absolute;
   top: 50%;
   left: 12px;
   margin-top: -2px;
-  vertical-align: middle; }
+  vertical-align: middle;
+  border-top-color: #009688; }
 
 .bootstrap-select.btn-group .dropdown-toggle:after {
   display: none; }
@@ -164,10 +168,14 @@ select.bs-select-hidden, select.selectpicker {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0;
-  -webkit-box-shadow: -2px 5px 17px 0 rgba(31, 45, 61, 0.1);
-  box-shadow: -2px 5px 17px 0 rgba(31, 45, 61, 0.1); }
+  -webkit-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2); }
   .bootstrap-select.btn-group .dropdown-menu .popover-title {
-    padding: 15px; }
+    padding: 15px;
+    color: #888ea8; }
+    .bootstrap-select.btn-group .dropdown-menu .popover-title button.close {
+      color: #888ea8;
+      text-shadow: none; }
   .bootstrap-select.btn-group .dropdown-menu.inner {
     display: block;
     position: static;
@@ -181,7 +189,10 @@ select.bs-select-hidden, select.selectpicker {
     position: relative;
     cursor: pointer;
     user-select: none;
-    padding: 0; }
+    padding: 0;
+    border-radius: 0; }
+    .bootstrap-select.btn-group .dropdown-menu a.dropdown-item:focus {
+      background-color: transparent; }
     .bootstrap-select.btn-group .dropdown-menu a.dropdown-item.active small {
       color: #fff; }
     .bootstrap-select.btn-group .dropdown-menu a.dropdown-item.disabled a {
@@ -201,7 +212,7 @@ select.bs-select-hidden, select.selectpicker {
   padding: 9px 19px;
   font-weight: 600; }
   .bootstrap-select.btn-group .dropdown-menu a.dropdown-item span.dropdown-item-inner:not([class*="bg-"]):hover {
-    color: #1b55e2;
+    color: #bfc9d4;
     background-color: rgba(27, 85, 226, 0.239216); }
   .bootstrap-select.btn-group .dropdown-menu a.dropdown-item span.dropdown-item-inner.opt {
     position: relative;
@@ -239,9 +250,10 @@ select.bs-select-hidden, select.selectpicker {
 
 .bootstrap-select.btn-group .no-results {
   padding: 3px;
-  background: #f1f2f3;
+  background: #1b2e4b;
   margin: 0 5px;
-  white-space: nowrap; }
+  white-space: nowrap;
+  color: #bfc9d4; }
 
 .bootstrap-select.btn-group.fit-width .dropdown-toggle .filter-option {
   position: static; }
@@ -396,16 +408,16 @@ select.bs-select-hidden, select.selectpicker {
   color: #e2a03f !important; }
 
 .btn.btn-outline-primary .caret {
-  border-top-color: #1b55e2; }
+  border-top-color: #1b55e2 !important; }
 
 .btn.btn-outline-success .caret {
-  border-top-color: #8dbf42; }
+  border-top-color: #8dbf42 !important; }
 
 .btn.btn-outline-info .caret {
-  border-top-color: #2196f3; }
+  border-top-color: #2196f3 !important; }
 
 .btn.btn-outline-danger .caret {
-  border-top-color: #e7515a; }
+  border-top-color: #e7515a !important; }
 
 .btn.btn-outline-warning .caret {
-  border-top-color: #e2a03f; }
+  border-top-color: #e2a03f !important; }

@@ -60,14 +60,14 @@
   opacity: 0.6; }
 
 .ps .ps__rail-x:hover, .ps .ps__rail-y:hover, .ps .ps__rail-x:focus, .ps .ps__rail-y:focus, .ps .ps__rail-x.ps--clicking, .ps .ps__rail-y.ps--clicking {
-  background-color: #eee;
+  background-color: transparent;
   opacity: 0.9; }
 
 /*
  * Scrollbar thumb styles
  */
 .ps__thumb-x {
-  background-color: #d3d3d3;
+  background-color: #888ea8;
   border-radius: 6px;
   transition: background-color .2s linear, height .2s ease-in-out;
   -webkit-transition: background-color .2s linear, height .2s ease-in-out;
@@ -78,7 +78,7 @@
   position: absolute; }
 
 .ps__thumb-y {
-  background-color: #d3d3d3;
+  background-color: #888ea8;
   border-radius: 6px;
   transition: background-color .2s linear, width .2s ease-in-out;
   -webkit-transition: background-color .2s linear, width .2s ease-in-out;
