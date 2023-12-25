@@ -1,0 +1,137 @@
+{% extends 'Master.html' %}
+{% load static %}
+
+
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{% static 'plugins/table/datatable/datatables.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'plugins/table/datatable/dt-global_style.css' %}">
+{% endblock head %}
+
+{% block content %}
+
+
+
+<!--  BEGIN CONTENT AREA  -->
+<div id="content" class="main-content">
+    <div class="layout-px-spacing">
+
+        <div class="row layout-top-spacing">
+            <div class="col-xl-12 col-lg-12 col-sm-12  layout-spacing">
+                <div class="widget-content widget-content-area br-6">
+                    <div class="table-responsive mb-4 mt-4">
+                        <table id="alter_pagination" class="table table-hover" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th> # </th>
+                                    <th>کد پرسنلی</th>
+                                    <th>نام</th>
+                                    <th> تیم </th>
+                                    <th> شروع همکاری </th>
+                                    <th class="text-center">عمل</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for item in PERSONEL %}
+                                <tr>
+                                    <td>{{forloop.counter}}</td>
+                                    <td>{{item.SPE}}</td>
+                                    <td>{{item.Name}}</td>
+
+                                    {% if item.Team %}
+                                    <td>{{item.Team}}</td>
+                                    {% else %}
+                                    <td>-</td>
+                                    {% endif %}
+
+                                    <td>{{item.Joined}}</td>
+                                    <td class="text-center">
+                                        <a href="javascript:void(0);" class="bs-tooltip" data-toggle="tooltip"
+                                            data-placement="top" title="" data-original-title="حذف">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="feather feather-x-octagon table-cancel">
+                                                <polygon
+                                                    points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2">
+                                                </polygon>
+                                                <line x1="15" y1="9" x2="9" y2="15"></line>
+                                                <line x1="9" y1="9" x2="15" y2="15"></line>
+                                            </svg>
+                                        </a>
+                                    </td>
+                                </tr>
+
+                                {% endfor %}
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="footer-wrapper">
+        <div class="footer-section f-section-1">
+            <p class=""> © کپی رایت</p>
+        </div>
+        <div class="footer-section f-section-2">
+            <span class="copyright"> بومی سازی شده توسط : <a href="https://imanpa.ir/store/"> ایمان پاکروح </a> </span>
+        </div>
+    </div>
+</div>
+<!--  END CONTENT AREA  -->
+
+{% with user.get_user_group_names as GRPS %}
+{% if 'super' in GRPS or 'HR' in GRPS %}
+<div class="modal fade" id="NewPersonelModal" tabindex="-1" role="dialog" aria-labelledby="NewPersonelModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="NewPersonelModalLabel">عنوان معین</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="" method="post" class="NewPersonelForm">
+                    {% csrf_token %}
+                    {{Form.as_p}}
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn" data-dismiss="modal"><i class="flaticon-cancel-12"></i>لغو</button>
+                <button type="button" class="btn btn-primary NewPersonelButt">ثبت</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+{% endwith %}
+{% endblock content %}
+
+{% block js %}
+<script src="{% static 'plugins/table/datatable/datatables.js' %}"></script>
+<script src="{% static 'js/custom/Personel.js' %}"></script>
+{% with user.get_user_group_names as GRPS %}
+{% if 'super' in GRPS or 'HR' in GRPS %}
+<script>
+    $(document).ready(function () {
+        let row = $('#alter_pagination_wrapper .row .col-md-6 .dataTables_filter')
+        $(row).prepend(
+            `<label>
+                    <button name="alter_pagination_btn" class="alter_pagination_btn btn btn-dark ADDPersonel"><i class="fas fa-plus"></i></button>
+                </label>
+        `)
+    });
+    $('label[for="id_first_name"]').html('نام:')
+    $('label[for="id_last_name"]').html('نام خانوادگی:')
+    $('#id_Address').addClass('form-control')
+    $('#id_Team').addClass('form-control')
+    $('#id_Status').addClass('form-control')
+</script>
+{% endif %}
+{% endwith %}
+
+{% endblock js %}

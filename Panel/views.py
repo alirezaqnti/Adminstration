@@ -11,9 +11,9 @@ from rest_framework.generics import ListAPIView, RetrieveAPIView
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
-from Admins.forms import TeamForm
+from Admins.forms import PersonelForm, TeamForm
 from Admins.models import Personel, Team
-from Admins.views import TeamData
+from Admins.views import PersonelData, TeamData
 from core import settings
 
 
@@ -69,6 +69,21 @@ class TeamsView(BaseView):
         paginator = Paginator(res["Teams"],int(pp))
         OBJ = paginator.get_page(int(page))
         context["TEAMS"] = OBJ
+        context["Form"] = form
+        return context
+
+class PersonelView(BaseView):
+    template_name = 'Personel.html'
+    
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        res = PersonelData()
+        form = PersonelForm()    
+        pp = self.request.GET.get('pp','15')
+        page = self.request.GET.get('page','1')
+        paginator = Paginator(res["Personel"],int(pp))
+        OBJ = paginator.get_page(int(page))
+        context["PERSONEL"] = OBJ
         context["Form"] = form
         return context
 

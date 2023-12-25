@@ -70,7 +70,28 @@ class Personel(User):
         if not self.pk:
             self.SPE = RandInt('SPE')
         super(Personel, self).save(*args, **kwargs)
-
+    def toJson(self):
+        
+        res =  {
+            'SPE': self.SPE,
+            'Name': f'{self.first_name} {self.last_name}',
+            'Phone': self.Phone,
+            'NationalID': self.NationalID,
+            'Address': self.Address,
+            
+            'JobTitle': self.JobTitle,
+            'Status': self.Status,
+            'Mood': self.Mood,
+            'Joined': self.Joined,
+            'LastLogin': self.last_login,
+            'Left': self.Left,
+        }
+        try:
+            res['Team'] = self.Team.Name
+            res['Team_id'] = self.Team.id
+        except:
+            pass
+        return res
 class Team(BaseModel,MPTTModel):
     ST = models.CharField(_("کد تیم"), max_length=15,blank=True,null=True,unique=True)
     Name = models.CharField(_("نام تیم"), max_length=50)
@@ -105,6 +126,7 @@ class Team(BaseModel,MPTTModel):
             'Active': str(self.Active),
             'Created': str(D)
         }
+
 class OffDayRequest(BaseModel):
     New = '1'
     Progress = '2'
@@ -127,7 +149,7 @@ class OffDayRequest(BaseModel):
     ]
 
     SOD = models.CharField(_("شماره درخواست"), max_length=15,blank=True,null=True,unique=True)
-    Personel = models.ForeignKey(Personel, verbose_name=_("پرسنل"), on_delete=models.CASCADE)
+    Personel = models.ForeignKey(Personel, verbose_name=_("پرسنل"), on_delete=models.CASCADE,related_name='offreq_personel')
     StartDate = models.DateTimeField(_("تاریخ شروع"), auto_now_add=False)
     EndDate = models.DateTimeField(_("تاریخ پایان"), auto_now_add=False)
     Status = models.CharField(_("وضعیت"), max_length=50,default=New,choices=STATUS_CHOICE)
