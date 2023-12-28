@@ -6,6 +6,14 @@ from datetime import datetime
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import Permission, User
 from django.contrib.contenttypes.models import ContentType
+from kavenegar import KavenegarAPI
+
+from . import models
+
+try:
+    from core.Private import KAVENEGAR_API_KEY
+except:
+    KAVENEGAR_API_KEY = ""
 
 
 def RandInt(prefix):
@@ -26,6 +34,7 @@ def CreateNewPermission(Model,Code,Name):
         content_type=content_type,
     )
     return permission
+
 def get_user_group_names(self):
     gp = self.groups.all()
     arr = []
@@ -35,3 +44,70 @@ def get_user_group_names(self):
     return arr
 
 User.add_to_class('get_user_group_names',get_user_group_names)
+
+
+# region Send SMS
+# send a single token sms
+def SendSMS(data):
+    try:
+        api = KavenegarAPI(KAVENEGAR_API_KEY)
+        params = {
+            "receptor": data["Phone"],
+            "template": data["template"],
+        }
+        try:
+            params["token"] = data["token"]
+        except:
+            pass
+
+        try:
+            params["token2"] = data["token2"]
+        except:
+            pass
+
+        try:
+            params["token3"] = data["token3"]
+        except:
+            pass
+
+        try:
+            params["token10"] = data["token10"]
+        except:
+            pass
+        try:
+            params["token20"] = data["token20"]
+        except:
+            pass
+
+        response = api.verify_lookup(params)
+    except Exception as e:
+        print(e)
+
+
+# endregion
+
+# region Code
+# functions:
+# ایجاد یک کد ۶ رقمی برای اعتبار سنجی تلفن همراه
+# ورودی ها:
+# شماره تلفن همراه
+# خروجی :
+# کد ۶ رقمی
+
+
+def Code(phone):
+    co = models.CodeReg()
+    co.Phone = phone
+    co.save()
+    number = co.Code
+    template = "AdminstrationCodeVerification"
+    data = {
+        "template": template,
+        "token": number,
+        "Phone": phone,
+    }
+    SendSMS(data)
+    return number
+
+
+# endregion

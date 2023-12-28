@@ -39,10 +39,9 @@
                 <div class="form-container">
                     <div class="form-content">
 
-                        <h1 class="">ورودی</h1>
-                        <p class="">برای ادامه به حساب کاربری خود وارد شوید</p>
+                        <h1 class="">ورود</h1>
 
-                        <form class="text-left">
+                        <form class="text-left" id="FormPass">
                             <div class="form">
 
                                 <div id="username-field" class="field-wrapper input">
@@ -60,8 +59,7 @@
                                 <div id="password-field" class="field-wrapper input mb-2">
                                     <div class="d-flex justify-content-between">
                                         <label for="password">رمزعبور</label>
-                                        <a href="auth_pass_recovery_boxed.html" class="forgot-pass-link">رمز عبور را
-                                            فراموش کرده اید؟</a>
+
                                     </div>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -78,9 +76,81 @@
                                         <circle cx="12" cy="12" r="3"></circle>
                                     </svg>
                                 </div>
+
+                                <div class="d-sm-flex justify-content-between mb-2">
+
+                                    <a href="javascript:void(0)" class="code-verification">
+                                        ورود با کد یکبار مصرف
+                                    </a>
+                                </div>
                                 <div class="d-sm-flex justify-content-between">
                                     <div class="field-wrapper">
-                                        <button type="button" class="btn btn-primary login-btn" value="">ورود</button>
+                                        <button type="button" class="btn btn-primary login-btn">ورود</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </form>
+                        <form class="text-left d-none" id="FormPhone">
+                            <div class="form">
+
+                                <div id="phone-field" class="field-wrapper input">
+                                    <label for="phone">شماره همراه</label>
+                                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor"
+                                        stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+                                        class="css-i6dzq1 feather">
+                                        <path
+                                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                        </path>
+                                    </svg>
+                                    <input id="Phone" name="phone" type="text" class="form-control"
+                                        placeholder="شماره همراه">
+                                </div>
+                                <div class="d-sm-flex justify-content-between mb-2">
+                                    <a href="javascript:void(0)" class="password-login">
+                                        ورود با رمز عبور
+                                    </a>
+                                </div>
+                                <div class="d-sm-flex justify-content-between">
+                                    <div class="field-wrapper">
+                                        <button type="button" class="btn btn-primary Phone-btn">دریافت
+                                            کد</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </form>
+                        <form class="text-left d-none" id="FormCode">
+                            <div class="form">
+
+                                <div id="Code-field" class="field-wrapper input">
+                                    <label for="Code">کد اعتبار سنجی</label>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="feather feather-hash">
+                                        <line x1="4" y1="9" x2="20" y2="9" />
+                                        <line x1="4" y1="15" x2="20" y2="15" />
+                                        <line x1="10" y1="3" x2="8" y2="21" />
+                                        <line x1="16" y1="3" x2="14" y2="21" />
+                                    </svg>
+                                    <input id="Code" name="Code" type="text" class="form-control"
+                                        placeholder="کد اعتبار سنجی">
+                                </div>
+                                <div class="d-sm-flex justify-content-between mb-2">
+                                    <a href="javascript:void(0)" class="password-login">
+                                        ورود با رمز عبور
+                                    </a>
+
+                                    <a href="javascript:void(0)" class="code-countdown">
+                                        ارسال مجدد تا <span class="countdown">180</span>ثانیه دیگر
+                                    </a>
+                                    <a href="javascript:void(0)" class="code-resend d-none">
+                                        ارسال مجدد
+                                    </a>
+                                </div>
+                                <div class="d-sm-flex justify-content-between">
+                                    <div class="field-wrapper">
+                                        <button type="button" class="btn btn-primary Code-btn">بررسی</button>
                                     </div>
                                 </div>
 
@@ -103,7 +173,6 @@
     <script src="{% static 'js/authentication/form-2.js' %}"></script>
     <script src="{% static 'js/custom/Main.js' %}"></script>
     <script src="{% static 'js/custom/login.js' %}"></script>
-
 </body>
 
 </html>

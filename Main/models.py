@@ -1,8 +1,15 @@
+import random
+from datetime import timezone
+
 from django.db import models
+from django.utils import timezone
 from django.utils.translation import gettext_lazy as _
 
 from .views import RandInt, RandString
 
+
+def Generate():
+    return random.randint(100000, 999999)
 
 class BaseModel(models.Model):
     Created = models.DateTimeField(auto_now_add=True)
@@ -113,3 +120,19 @@ class Respondent(BaseModel):
         if not self.pk:
             self.SQR = RandInt('SQR')
         super(Respondent, self).save(*args, **kwargs)
+
+
+class CodeReg(models.Model):
+    Code = models.CharField(_("کد"), max_length=6, default=Generate)
+    Phone = models.CharField(_("شماره همراه"), max_length=50)
+    Email = models.CharField(_("ایمیل"), max_length=50)
+    Active = models.BooleanField(_("وضعیت"), default=True)
+    Created_At = models.DateTimeField(
+        _("تاریخ ایجاد"), auto_now=False, default=timezone.now
+    )
+
+    class Meta:
+        verbose_name_plural = _("CodeRegs")
+
+    def __str__(self):
+        return self.Code

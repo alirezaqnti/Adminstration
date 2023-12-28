@@ -35,10 +35,12 @@ $(".NewPersonelButt").click(async function (e) {
   });
   let info = await res.json();
   console.log(info);
-  if ((info.stat = 200)) {
+  if (info.stat == 200) {
     let data = GetPersonelData();
     console.log(data);
     window.location.reload();
+  } else if (info.stat == 500) {
+    Failed("خطا!", info.report);
   }
 });
 GetPersonelData = async function () {

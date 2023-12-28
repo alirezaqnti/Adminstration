@@ -26,6 +26,7 @@
                                     <th>کد پرسنلی</th>
                                     <th>نام</th>
                                     <th> تیم </th>
+                                    <th> عنوان شغلی </th>
                                     <th> شروع همکاری </th>
                                     <th class="text-center">عمل</th>
                                 </tr>
@@ -43,6 +44,7 @@
                                     <td>-</td>
                                     {% endif %}
 
+                                    <td>{{item.JobTitle}}</td>
                                     <td>{{item.Joined}}</td>
                                     <td class="text-center">
                                         <a href="javascript:void(0);" class="bs-tooltip" data-toggle="tooltip"

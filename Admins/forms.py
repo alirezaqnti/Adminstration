@@ -1,4 +1,8 @@
+from typing import Any
+
 from django import forms
+from django.core.exceptions import ValidationError
+from django.db.models import Q
 
 from .models import Personel, Team
 
@@ -29,9 +33,7 @@ class PersonelForm(forms.ModelForm):
             'Phone',
             'NationalID',
             'JobTitle',
-            'Address',
             'Team',
-            'Status',
         ]
         widgets = {
             "first_name": forms.TextInput(attrs={"class": "form-control", "required": "true"}),
@@ -41,3 +43,16 @@ class PersonelForm(forms.ModelForm):
             "JobTitle": forms.TextInput(attrs={"class": "form-control", "required": "true"}),
             "Description": forms.Textarea(attrs={"class": "form-control", "required": "true"}),
         }
+    def clean(self):
+        cleaned_data = super().clean()
+        Phone = cleaned_data["Phone"]
+        NationalID = cleaned_data["NationalID"]
+        try:
+            PE = Personel.objects.get(Q(Phone=Phone) | Q(NationalID=NationalID))
+            print(PE)
+            # return False
+            raise ValidationError('کاربر دیگری با این شماره تماس یا کد ملی موجود است')
+        except:
+            return super().clean()
+
+    

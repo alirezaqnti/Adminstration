@@ -53,7 +53,7 @@ class Personel(User):
     JobTitle = models.CharField(_("عنوان شغلی"), max_length=100,blank=True,null=True)
     Status = models.CharField(_("وضعیت"), max_length=20,default=New,choices=STATUS_CHOICE)
     Mood = models.CharField(_("مود رفتاری"), max_length=20,default=OK,choices=MOOD_CHOICE)
-    Joined = models.DateField(_("تاریخ شروع همکاری"), auto_now_add=False,blank=True,null=True)
+    Joined = models.DateField(_("تاریخ شروع همکاری"), auto_now_add=True,blank=True,null=True)
     Left = models.DateField(_("تاریخ پایان همکاری"), auto_now_add=False,blank=True,null=True)
 
 
@@ -92,6 +92,7 @@ class Personel(User):
         except:
             pass
         return res
+
 class Team(BaseModel,MPTTModel):
     ST = models.CharField(_("کد تیم"), max_length=15,blank=True,null=True,unique=True)
     Name = models.CharField(_("نام تیم"), max_length=50)
