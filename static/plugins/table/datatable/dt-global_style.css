@@ -243,7 +243,7 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {
   width: 17px;
 }
 
-.table-cancel {
+.table.dataTable .feather {
   color: #888ea8;
   margin-left: 6px;
   vertical-align: middle;
@@ -251,8 +251,8 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {
   cursor: pointer;
 }
 
-.table-hover:not(.table-dark) tbody tr:hover .table-cancel {
-  color: #e7515a;
+.table-hover:not(.table-dark) tbody tr:hover .feather {
+  color: #009688;
 }
 
 @media all and (-ms-high-contrast: none),

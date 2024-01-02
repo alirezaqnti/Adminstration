@@ -9,6 +9,7 @@ urlpatterns = [
     path('dashboard/set-login-info/username-check/',views.UsernameCheck.as_view(),name='UsernameCheck'),
     path('teams/',views.TeamsView.as_view(),name='TeamsView'),
     path('personel/',views.PersonelView.as_view(),name='PersonelView'),
+    path('personel/<str:SPE>',views.PersonelInfo.as_view(),name='PersonelInfo'),
     path('logout/',views.LogoutView.as_view(),name='LogoutView'),
     path('login/',views.LoginView.as_view(),name='LoginView'),
     path('login/authentiction/password/',views.LoginPassAPIView.as_view(),name='LoginAPIView'),

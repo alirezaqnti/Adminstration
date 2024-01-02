@@ -365,6 +365,7 @@
             <nav id="sidebar">
                 <div class="shadow-bottom"></div>
 
+                {% if not INACTIVE %}
                 <ul class="list-unstyled menu-categories" id="accordionExample">
 
                     <li class="menu">
@@ -1034,19 +1035,55 @@
 
                 </ul>
 
+                {% endif %}
+
+
             </nav>
 
         </div>
         <!--  END SIDEBAR  -->
 
-
-
+        {% if not INACTIVE %}
         {% block content %}
 
         {% endblock content %}
+        {% endif %}
+
+
+
     </div>
 
 
+    {% if INACTIVE %}
+    <div class="modal fade modal-notification" id="INACTIVEModal" tabindex="-1" role="dialog"
+        aria-labelledby="INACTIVEModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document" id="INACTIVEModalLabel">
+            <div class="modal-content">
+                <div class="modal-header align-items-center justify-content-center text-center">
+                    <div class="icon-content mb-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-bell">
+                            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                            <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                        </svg>
+                    </div>
+
+                </div>
+                <div class="modal-body text-center">
+                    <b class="modal-text">
+                        همکار عزیز!
+                    </b>
+                    <p>
+                        پنل کاربری شما هنوز توسط هد تیم تایید نشده است!
+                        تایید حساب کاربری شما از طریق پیامک به شما اطلاع داده می شود
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% endif %}
 
 
     <!-- BEGIN GLOBAL MANDATORY SCRIPTS -->
@@ -1063,7 +1100,11 @@
     <script src="{% static 'js/custom.js' %}"></script>
     <script src="{% static 'js/custom/Main.js' %}"></script>
     <!-- END GLOBAL MANDATORY SCRIPTS -->
-
+    {% if INACTIVE %}
+    <script>
+        $('#INACTIVEModal').modal('show')
+    </script>
+    {% endif %}
     {% block js %}
 
     {% endblock js %}

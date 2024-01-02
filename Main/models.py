@@ -35,7 +35,7 @@ class City(models.Model):
 
 
 class Address(BaseModel):  # جدول مربوط به ادرس های کاربر
-    Personel = models.ForeignKey('Admins.Personel', verbose_name=_("پرسنل"), on_delete=models.CASCADE)
+    Personel = models.ForeignKey('Admins.Personel', verbose_name=_("پرسنل"), on_delete=models.CASCADE,related_name='address_pers')
     Title = models.CharField(_("عنوان آدرس"), max_length=100)  # عنوان آدرس
     Phone = models.CharField(_("شماره همراه"), max_length=11)  # شماره تلفن گیرنده
     State = models.ForeignKey(
@@ -107,7 +107,7 @@ class Respondent(BaseModel):
     SQR = models.CharField(_("شماره پاسخ"), max_length=15,blank=True,null=True,unique=True)
     Questonnair = models.ForeignKey(Questonnair, verbose_name=_("پرسشنامه"), on_delete=models.CASCADE)
     Form = models.TextField(_("فرم"))
-    Personel = models.ForeignKey("Admins.Personel", verbose_name=_("کارمند"), on_delete=models.CASCADE)
+    Personel = models.ForeignKey("Admins.Personel", verbose_name=_("کارمند"), on_delete=models.CASCADE,related_name='respond_pers')
 
     class Meta(BaseModel.Meta):
         verbose_name = _("Respondent")

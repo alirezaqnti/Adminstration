@@ -113,7 +113,7 @@ LOGIN_URL = '/login/'
 LOGOUT_REDIRECT_URL = '/login/'
 
 if DEBUG:
-    ALLOWED_HOSTS = ['127.0.0.1']
+    ALLOWED_HOSTS = ['127.0.0.1','172.20.10.7']
     REFFERER = 'http://127.0.0.1:8000/'
     try:
         from .Private import DATABASES

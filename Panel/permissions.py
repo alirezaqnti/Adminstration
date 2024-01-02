@@ -6,8 +6,10 @@ class LoginRequiredPermission(LoginRequiredMixin):
     
     def dispatch(self, request, *args, **kwargs):
         try:
-            print("USER:",request.user.has_usable_password())
             if request.user.has_usable_password():
+                perm = request.user.get_all_permissions()
+                if len(perm) == 0 :
+                    request.session['INACTIVE'] = True
                 return super().dispatch(request, *args, **kwargs)
             else:
                 return redirect('SetLoginInfo')

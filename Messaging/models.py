@@ -33,7 +33,7 @@ class ChatThread(BaseModel):
 
 class ChatParticipant(BaseModel):
     Thread = models.ForeignKey(ChatThread, verbose_name=_("چت"), on_delete=models.CASCADE)
-    Personel = models.ForeignKey("Admins.Personel", verbose_name=_("پرسنل"), on_delete=models.CASCADE)
+    Personel = models.ForeignKey("Admins.Personel", verbose_name=_("پرسنل"), on_delete=models.CASCADE,)
     # Access
 
     class Meta(BaseModel.Meta):
@@ -41,7 +41,7 @@ class ChatParticipant(BaseModel):
         verbose_name_plural = _("chatParticipants")
 
     def __str__(self):
-        return self.Personel.SRE
+        return self.Personel.SPE
     
 
 class ChatMessage(BaseModel):

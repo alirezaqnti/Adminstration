@@ -5,6 +5,16 @@
 {% block head %}
 <link rel="stylesheet" type="text/css" href="{% static 'plugins/table/datatable/datatables.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static 'plugins/table/datatable/dt-global_style.css' %}">
+<link href="{% static 'plugins/flatpickr/flatpickr.css' %}" rel="stylesheet" type="text/css">
+<link href="{% static 'plugins/flatpickr/custom-flatpickr.css' %}" rel="stylesheet" type="text/css">
+<!-- <link href="{% static 'plugins/noUiSlider/nouislider.min.css' %}" rel="stylesheet" type="text/css"> -->
+<!-- END THEME GLOBAL STYLES -->
+
+<!--  BEGIN CUSTOM STYLE FILE  -->
+<!-- <link href="{% static 'css/scrollspyNav.css' %}" rel="stylesheet" type="text/css" /> -->
+<!-- <link href="{% static 'plugins/noUiSlider/custom-nouiSlider.css' %}" rel="stylesheet" type="text/css"> -->
+<!-- <link href="{% static 'plugins/bootstrap-range-Slider/bootstrap-slider.css' %}" rel="stylesheet" type="text/css"> -->
+<!--  END CUSTOM STYLE FILE  -->
 {% endblock head %}
 
 {% block content %}
@@ -47,17 +57,26 @@
                                     <td>{{item.JobTitle}}</td>
                                     <td>{{item.Joined}}</td>
                                     <td class="text-center">
-                                        <a href="javascript:void(0);" class="bs-tooltip" data-toggle="tooltip"
-                                            data-placement="top" title="" data-original-title="حذف">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                        <a href="{% url 'PersonelInfo' item.SPE %}" class="bs-tooltip"
+                                            data-toggle="tooltip" data-placement="top" title=""
+                                            data-original-title="جزئیات">
+                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:svg="http://www.w3.org/2000/svg" width="24" height="24"
                                                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                                 stroke-linecap="round" stroke-linejoin="round"
-                                                class="feather feather-x-octagon table-cancel">
+                                                class="feather feather-octagon" version="1.1" id="svg1187"
+                                                sodipodi:docname="octagon.svg"
+                                                inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)">
+                                                <defs id="defs1191" />
                                                 <polygon
-                                                    points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2">
-                                                </polygon>
-                                                <line x1="15" y1="9" x2="9" y2="15"></line>
-                                                <line x1="9" y1="9" x2="15" y2="15"></line>
+                                                    points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2"
+                                                    id="polygon1185" />
+                                                <ellipse cx="12.167219" cy="12.219504" id="circle996" rx="0.86292326"
+                                                    ry="0.91724318" style="stroke-width:1.77935" />
+                                                <ellipse cx="18.20768" cy="12.219504" id="circle998" rx="0.86292326"
+                                                    ry="0.91724318" style="stroke-width:1.77935" />
+                                                <ellipse cx="6.1267557" cy="12.219504" id="circle1000" rx="0.86292326"
+                                                    ry="0.91724318" style="stroke-width:1.77935" />
                                             </svg>
                                         </a>
                                     </td>
@@ -116,6 +135,19 @@
 {% block js %}
 <script src="{% static 'plugins/table/datatable/datatables.js' %}"></script>
 <script src="{% static 'js/custom/Personel.js' %}"></script>
+<script src="{% static 'plugins/flatpickr/flatpickr.js' %}"></script>
+<script src="{% static 'plugins/flatpickr/custom-flatpickr.js' %}"></script>
+<link href="{% static 'plugins/flatpickr/rtl.css' %}" rel="stylesheet">
+<script src="{% static 'plugins/flatpickr/jdate.min.js' %}"></script>
+<script>window.Date = window.JDate;</script>
+<script src="{% static 'plugins/flatpickr/l10n/fa.js' %}"></script>
+<!-- <link href="../../dist/flatpickr.min.css" rel="stylesheet"> -->
+<!-- <script src="../../dist/flatpickr.min.js"></script> -->
+<!-- <script src="../../dist/plugins/rangePlugin.js"></script> -->
+<!-- <script src="{% static 'js/scrollspyNav.js' %}"></script> -->
+<!-- <script src="{% static 'plugins/noUiSlider/nouislider.min.js' %}"></script> -->
+<!-- <script src="{% static 'plugins/noUiSlider/custom-nouiSlider.js' %}"></script> -->
+<!-- <script src="{% static 'plugins/bootstrap-range-Slider/bootstrap-rangeSlider.js' %}"></script> -->
 {% with user.get_user_group_names as GRPS %}
 {% if 'super' in GRPS or 'HR' in GRPS %}
 <script>
@@ -129,9 +161,18 @@
     });
     $('label[for="id_first_name"]').html('نام:')
     $('label[for="id_last_name"]').html('نام خانوادگی:')
+    $('label[for="id_email"]').html('ایمیل:')
     $('#id_Address').addClass('form-control')
     $('#id_Team').addClass('form-control')
     $('#id_Status').addClass('form-control')
+    $('#id_BirthDate').addClass('flatpicker')
+
+    var f3 = flatpickr('#id_BirthDate', {
+        locale: "fa",
+        disableMobile: true
+
+    });
+
 </script>
 {% endif %}
 {% endwith %}

@@ -48,6 +48,8 @@ class Personel(User):
     SPE = models.CharField(_("کد پرسنلی"), max_length=15,blank=True,null=True,unique=True)
     Phone = models.CharField(_("شماره همراه"), max_length=13)
     NationalID = models.CharField(_("کد ملی"), max_length=10)
+    BirthDate = models.CharField(_("تاریخ تولد"), max_length=50,)
+    Picture = models.ImageField(_("تصویر پروفایل"), upload_to='Admins/', max_length=500)
     Address = models.ForeignKey(Address, verbose_name=_("آدرس"), on_delete=models.CASCADE,blank=True,null=True)
     Team = models.ForeignKey("Team", verbose_name=_("تیم"), on_delete=models.CASCADE,blank=True,null=True,related_name='pers_team')
     JobTitle = models.CharField(_("عنوان شغلی"), max_length=100,blank=True,null=True)
@@ -92,6 +94,37 @@ class Personel(User):
         except:
             pass
         return res
+
+class Education(BaseModel):
+    Personel = models.ForeignKey(Personel, verbose_name=_("پرسنل"), on_delete=models.CASCADE,related_name='edu_personel')
+    Title = models.CharField(_("عنوان"), max_length=300)
+    Institude = models.CharField(_("موسسه/دانشگاه"), max_length=200)
+    StartDate = models.CharField(_("تاریخ شروع"), max_length=50)
+    EndDate = models.CharField(_("تاریخ پایان"), max_length=50)
+    
+
+    class Meta:
+        verbose_name = _("education")
+        verbose_name_plural = _("educations")
+
+    def __str__(self):
+        return self.Title
+
+
+class JobEXP(BaseModel):
+    Personel = models.ForeignKey(Personel, verbose_name=_("پرسنل"), on_delete=models.CASCADE,related_name='exp_personel')
+    Position = models.CharField(_("موقعیت شغلی"), max_length=300)
+    Company = models.CharField(_("شرکت"), max_length=200)
+    StartDate = models.CharField(_("تاریخ شروع"), max_length=50)
+    EndDate = models.CharField(_("تاریخ پایان"), max_length=50)
+    
+
+    class Meta:
+        verbose_name = _("JobEXP")
+        verbose_name_plural = _("JobEXPs")
+
+    def __str__(self):
+        return self.Position
 
 class Team(BaseModel,MPTTModel):
     ST = models.CharField(_("کد تیم"), max_length=15,blank=True,null=True,unique=True)

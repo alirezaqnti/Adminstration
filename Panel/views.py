@@ -151,3 +151,18 @@ class UsernameCheck(APIView):
         except:
             stat = 200
         return Response({'stat':stat})
+
+
+class PersonelInfo(BaseView):
+    template_name = "PersonelInfo.html"
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        SPE = self.kwargs['SPE']
+        PE = Personel.objects.filter(SPE=SPE).prefetch_related('offreq_personel','address_pers','respond_pers','assign_pers','edu_personel','exp_personel').first()
+        
+        context["Person"] = PE
+        context["EDU"] = PE.edu_personel.all()
+        context["EXP"] = PE.exp_personel.all()
+        # context["Address"] = PE.address_pers.last()
+        return context
+    

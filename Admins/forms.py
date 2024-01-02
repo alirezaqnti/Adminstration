@@ -31,16 +31,20 @@ class PersonelForm(forms.ModelForm):
             'first_name',
             'last_name',
             'Phone',
+            'email',
             'NationalID',
+            'BirthDate',
             'JobTitle',
             'Team',
         ]
         widgets = {
             "first_name": forms.TextInput(attrs={"class": "form-control", "required": "true"}),
             "last_name": forms.TextInput(attrs={"class": "form-control", "required": "true"}),
+            "email": forms.TextInput(attrs={"class": "form-control", "required": "true"}),
             "Phone": forms.TextInput(attrs={"class": "form-control num-input", "required": "true"}),
             "NationalID": forms.TextInput(attrs={"class": "form-control num-input", "required": "true"}),
             "JobTitle": forms.TextInput(attrs={"class": "form-control", "required": "true"}),
+            "BirthDate": forms.TextInput(attrs={"class": "form-control flatpickr flatpickr-input active", "required": "true"}),
             "Description": forms.Textarea(attrs={"class": "form-control", "required": "true"}),
         }
     def clean(self):
