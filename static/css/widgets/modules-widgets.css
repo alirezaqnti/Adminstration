@@ -286,8 +286,8 @@
         background-color: #1b55e2;
         box-shadow: 0 10px 20px -10px #1b55e2; }
       .widget.widget-activity-three .timeline-line .item-timeline .t-dot div.t-success {
-        background-color: #009688;
-        box-shadow: 0 10px 20px -10px #009688; }
+        background-color: #ffffff;
+        box-shadow: 0 10px 20px -10px #ffffff; }
       .widget.widget-activity-three .timeline-line .item-timeline .t-dot div.t-danger {
         background-color: #e7515a;
         box-shadow: 0 10px 20px -10px #e7515a; }
@@ -387,8 +387,8 @@
     background-color: #2196f3; }
   .widget-one_hybrid.widget-engagement .widget-heading .w-icon {
     color: #fff;
-    border: 1px solid #009688;
-    background-color: #009688; }
+    border: 1px solid #ffffff;
+    background-color: #ffffff; }
 
 /*
     ==================
@@ -602,7 +602,7 @@
     text-align: center; }
     .widget-card-two .card-bottom-section h5 {
       font-size: 14px;
-      color: #009688;
+      color: #ffffff;
       font-weight: 700;
       margin-bottom: 20px; }
     .widget-card-two .card-bottom-section .img-group img {
@@ -691,7 +691,7 @@
       font-size: 14px;
       font-weight: 700;
       margin-bottom: 4px;
-      color: #009688; }
+      color: #ffffff; }
     .widget-five .w-content div .task-hight-priority {
       color: #acb0c3;
       font-weight: 500;
@@ -906,7 +906,7 @@
     .widget-three .widget-content .summary-list:nth-child(1) .w-icon {
       background: #5c1ac3; }
     .widget-three .widget-content .summary-list:nth-child(2) .w-icon {
-      background: #009688; }
+      background: #ffffff; }
     .widget-three .widget-content .summary-list:nth-child(3) .w-icon {
       background: #e2a03f; }
     .widget-three .widget-content .summary-list:nth-child(1) .w-icon svg {
@@ -1069,7 +1069,7 @@
         height: 14px;
         vertical-align: baseline; }
       .widget-table-one .transactions-list .t-item .t-rate.rate-inc p, .widget-table-one .transactions-list .t-item .t-rate.rate-inc svg {
-        color: #009688; }
+        color: #ffffff; }
       .widget-table-one .transactions-list .t-item .t-rate.rate-dec p, .widget-table-one .transactions-list .t-item .t-rate.rate-dec svg {
         color: #e7515a; }
 
@@ -1248,7 +1248,7 @@
       background-color: #1b55e2;
       border-color: #a4bdf7; }
     .widget-activity-four .timeline-line .item-timeline.timeline-success .t-dot:before {
-      background-color: #009688;
+      background-color: #ffffff;
       border-color: #9ad2cd; }
     .widget-activity-four .timeline-line .item-timeline.timeline-danger .t-dot:before {
       background-color: #e7515a;
@@ -1346,7 +1346,7 @@
   font-size: 23px;
   font-weight: 700;
   margin-bottom: 0;
-  color: #009688; }
+  color: #ffffff; }
 
 .widget-account-invoice-one .invoice-box .inv-detail {
   margin-bottom: 18px;
@@ -1477,8 +1477,8 @@
       transform: translateY(-3px);
       background-color: transparent; }
     .widget-table-two .table tr .td-content .outline-badge-success {
-      color: #009688;
-      border-color: #009688; }
+      color: #ffffff;
+      border-color: #ffffff; }
 
 /*
     ===========================
@@ -1581,8 +1581,8 @@
       border: 1px dashed #1b55e2;
       background: #c2d5ff; }
     .widget-table-three .table .td-content .tag-success {
-      color: #009688;
-      border: 1px dashed #009688;
+      color: #ffffff;
+      border: 1px dashed #ffffff;
       background: #e6ffbf; }
     .widget-table-three .table .td-content .tag-danger {
       color: #e7515a;

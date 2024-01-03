@@ -84,7 +84,7 @@
   box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2);
   width: 43px;
   height: 41px;
-  color: #009688;
+  color: #ffffff;
   fill: rgba(27, 85, 226, 0.239216); }
 .searchable-container #btn-add-contact:hover {
   color: #888ea8;
@@ -158,14 +158,14 @@
   border: 1px solid #1b55e2;
   padding: 10px 25px; }
 .searchable-container .modal-footer .btn#btn-edit {
-  background-color: #009688;
+  background-color: #ffffff;
   color: #fff;
   font-weight: 600;
-  border: 1px solid #009688;
+  border: 1px solid #ffffff;
   padding: 10px 25px; }
 
 .searchable-container .switch .view-grid:hover, .searchable-container .switch .view-list:hover, .searchable-container .switch .active-view {
-  color: #009688;
+  color: #ffffff;
   fill: rgba(27, 85, 226, 0.239216); }
 
 .searchable-container .searchable-items.list .items.items-header-section h4 {
@@ -259,7 +259,7 @@
   width: 20px;
   fill: rgba(27, 85, 226, 0.239216); }
 .searchable-container .searchable-items.list .items .action-btn .delete-multiple:hover {
-  color: #009688; }
+  color: #ffffff; }
 .searchable-container .searchable-items.list .items .action-btn .edit, .searchable-container .searchable-items.list .items .action-btn .delete {
   margin-left: 5px;
   cursor: pointer;
@@ -267,7 +267,7 @@
   width: 20px;
   fill: rgba(27, 85, 226, 0.239216); }
 .searchable-container .searchable-items.list .items .action-btn .edit:hover, .searchable-container .searchable-items.list .items .action-btn .delete:hover {
-  color: #009688; }
+  color: #ffffff; }
 
 .searchable-items.grid {
   display: -ms-flexbox;
@@ -316,7 +316,7 @@
   font-size: 21px;
   font-weight: 600;
   margin-bottom: 0;
-  color: #009688; }
+  color: #ffffff; }
 .searchable-container .searchable-items.grid .items .user-meta-info .user-work {
   font-weight: 700;
   font-size: 13px; }
@@ -372,7 +372,7 @@
   width: 20px;
   fill: rgba(27, 85, 226, 0.239216); }
 .searchable-container .searchable-items.grid .items .action-btn .edit:hover, .searchable-container .searchable-items.grid .items .action-btn .delete:hover {
-  color: #009688; }
+  color: #ffffff; }
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   /* IE10+ CSS styles go here */

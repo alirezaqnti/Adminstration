@@ -51,7 +51,7 @@
     .general-info .info .upload p {
       font-size: 14px;
       font-weight: 600;
-      color: #009688; }
+      color: #ffffff; }
   .general-info .info label {
     color: #888ea8;
     font-size: 13px;
@@ -157,7 +157,7 @@
     border: none; }
 
 .input-group .input-group-prepend .input-group-text svg, .input-group:hover .input-group-prepend .input-group-text svg {
-  color: #009688; }
+  color: #ffffff; }
 
 .social .info input {
   border-radius: 0.25rem !important; }
@@ -201,16 +201,16 @@
       background: #1b2e4b;
       padding: 3px 8px;
       border-radius: 5px;
-      color: #009688;
+      color: #ffffff;
       border: 1px solid #1b2e4b; }
     .skill .range-count .range-count-unit {
-      color: #009688; }
+      color: #ffffff; }
   .skill .custom-progress.top-right .range-count, .skill .custom-progress.bottom-right .range-count {
     text-align: left; }
   .skill .progress-range-counter::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    background: #009688;
+    background: #ffffff;
     cursor: pointer;
     height: 16px;
     width: 16px;
@@ -221,14 +221,14 @@
     -webkit-transform: scale(1.2);
     transform: scale(1.2); }
   .skill .progress-range-counter:focus::-webkit-slider-thumb {
-    background: #009688;
+    background: #ffffff;
     cursor: pointer;
     height: 16px;
     width: 16px;
     margin-top: -4px;
     box-shadow: none; }
   .skill .progress-range-counter::-moz-range-thumb {
-    background: #009688;
+    background: #ffffff;
     cursor: pointer;
     height: 16px;
     width: 16px;

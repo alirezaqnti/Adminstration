@@ -13,7 +13,7 @@
   position: relative;
   display: block; }
   .custom-file-container label {
-    color: #009688; }
+    color: #ffffff; }
     .custom-file-container label .custom-file-container__image-clear {
       color: #e0e6ed; }
 
@@ -54,7 +54,7 @@
   border-radius: .25rem;
   height: auto;
   border: 1px solid #1b2e4b;
-  color: #009688;
+  color: #ffffff;
   font-size: 15px;
   padding: 8px 10px;
   letter-spacing: 1px;
@@ -71,7 +71,7 @@
   padding: 10px 16px;
   line-height: 1.25;
   background-color: rgba(0, 150, 136, 0.1);
-  color: #009688;
+  color: #ffffff;
   box-sizing: border-box; }
 
 .custom-file-container__image-preview {

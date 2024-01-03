@@ -862,34 +862,34 @@ code {
   border-radius: 50%; }
 
 #sidebar ul.menu-categories ul.submenu > li.active a {
-  color: #009688;
+  color: #ffffff;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   font-weight: 600; }
 
 #sidebar ul.menu-categories li.menu ul.submenu > li.active a:before {
-  background-color: #009688; }
+  background-color: #ffffff; }
 
 #sidebar ul.menu-categories ul.submenu > li.active {
   position: relative; }
 
 #sidebar ul.menu-categories ul.submenu > li a:hover {
-  color: #009688; }
+  color: #ffffff; }
 #sidebar ul.menu-categories ul.submenu > li a:hover:before {
-  background-color: #009688 !important; }
+  background-color: #ffffff !important; }
 
 #sidebar ul.menu-categories ul.submenu > li a i {
   align-self: center;
   font-size: 9px; }
 
 #sidebar ul.menu-categories ul.submenu li > [data-active="true"] i {
-  color: #009688; }
+  color: #ffffff; }
 
 #sidebar ul.menu-categories ul.submenu li > [data-active="true"]:before {
-  background-color: #009688 !important; }
+  background-color: #ffffff !important; }
 
 #sidebar ul.menu-categories ul.submenu li > a[data-active="true"] {
-  color: #009688; }
+  color: #ffffff; }
 
 #sidebar ul.menu-categories ul.submenu > li ul.sub-submenu > li a {
   position: relative;
@@ -903,13 +903,13 @@ code {
   color: #5c1ac3; }
 
 #sidebar ul.menu-categories ul.submenu > li ul.sub-submenu > li a:hover {
-  color: #009688; }
+  color: #ffffff; }
 
 #sidebar ul.menu-categories ul.submenu > li ul.sub-submenu > li a:before {
   display: none; }
 
 #sidebar ul.menu-categories ul.submenu > li ul.sub-submenu > li.active a:before {
-  background-color: #009688; }
+  background-color: #ffffff; }
 
 .overlay {
   display: none;

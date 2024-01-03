@@ -23,7 +23,7 @@ table.dataTable {
   border-right: none !important; }
 
 .table-hover:not(.table-dark) tbody tr:hover .new-control.new-checkbox .new-control-indicator {
-  border: 2px solid #009688; }
+  border: 2px solid #ffffff; }
 
 /*Style. 1*/
 .style-1 .user-name {
@@ -116,4 +116,4 @@ table.dataTable {
   fill: rgba(231, 81, 90, 0.219608); }
 
 .style-3.table-hover:not(.table-dark) tbody tr:hover td:first-child {
-  color: #009688 !important; }
+  color: #ffffff !important; }

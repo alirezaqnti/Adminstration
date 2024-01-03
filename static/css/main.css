@@ -146,14 +146,14 @@ mark {
 
 /*blockquote*/
 blockquote.blockquote {
-  color: #009688;
+  color: #ffffff;
   padding: 20px 14px 20px 20px;
   font-size: 0.875rem;
   background-color: #1b2e4b;
   border-bottom-left-radius: 8px;
   border-top-left-radius: 8px;
   border: 1px solid #1b2e4b;
-  border-right: 2px solid #009688;
+  border-right: 2px solid #ffffff;
 }
 
 blockquote.blockquote>p {
@@ -176,7 +176,7 @@ blockquote small {
 }
 
 blockquote.media-object.m-o-border-right {
-  border-left: 4px solid #009688;
+  border-left: 4px solid #ffffff;
   border-right: none;
 }
 
@@ -291,7 +291,7 @@ label {
 .form-control {
   height: auto;
   border: 1px solid #1b2e4b;
-  color: #009688;
+  color: #ffffff;
   font-size: 15px;
   padding: 8px 10px;
   letter-spacing: 1px;
@@ -357,7 +357,7 @@ label {
   padding: 8px 10px;
   letter-spacing: 1px;
   border: 1px solid #1b2e4b;
-  color: #009688;
+  color: #ffffff;
   background: #1b2e4b;
   background: #1b2e4b url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23009688' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat left 0.75rem center/8px 10px;
 }
@@ -461,7 +461,7 @@ select.form-control.form-custom {
 .custom-file-label {
   height: auto;
   border: 1px solid #1b2e4b;
-  color: #009688;
+  color: #ffffff;
   font-size: 15px;
   padding: 8px 10px;
   letter-spacing: 1px;
@@ -560,13 +560,13 @@ select.form-control.form-custom {
 }
 
 .valid-feedback {
-  color: #009688;
+  color: #ffffff;
   font-size: 13px;
   letter-spacing: 1px;
 }
 
 .valid-tooltip {
-  background-color: #009688;
+  background-color: #ffffff;
 }
 
 .invalid-tooltip {
@@ -575,19 +575,19 @@ select.form-control.form-custom {
 
 .custom-select.is-valid,
 .form-control.is-valid {
-  border-color: #009688;
+  border-color: #ffffff;
   background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23009688' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-check'%3e%3cpolyline points='20 6 9 17 4 12'%3e%3c/polyline%3e%3c/svg%3e");
 }
 
 .was-validated .custom-select:valid,
 .was-validated .form-control:valid {
-  border-color: #009688;
+  border-color: #ffffff;
   background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23009688' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-check'%3e%3cpolyline points='20 6 9 17 4 12'%3e%3c/polyline%3e%3c/svg%3e");
 }
 
 .custom-control-input.is-valid~.custom-control-label,
 .was-validated .custom-control-input:valid~.custom-control-label {
-  color: #009688;
+  color: #ffffff;
 }
 
 .form-control.is-invalid,

@@ -25,14 +25,14 @@
     position: relative;
     font-size: 19px;
     font-weight: 600;
-    color: #009688;
+    color: #ffffff;
     margin-bottom: 28px; }
     .timeline-simple p.timeline-title:before {
       position: absolute;
       content: "";
       height: 2px;
       width: 70px;
-      background: #009688;
+      background: #ffffff;
       border-radius: 50px;
       bottom: -2px;
       right: 15px; }
@@ -80,14 +80,14 @@
       font-size: 20px;
       font-weight: 700;
       margin-bottom: 0;
-      color: #009688; }
+      color: #ffffff; }
     .timeline-simple .timeline-list .timeline-post-content svg {
       color: #888ea8;
       vertical-align: text-bottom;
       width: 21px;
       height: 21px; }
     .timeline-simple .timeline-list .timeline-post-content:hover svg {
-      color: #009688;
+      color: #ffffff;
       fill: rgba(27, 85, 226, 0.239216); }
     .timeline-simple .timeline-list .timeline-post-content h6 {
       display: inline-block;
@@ -212,7 +212,7 @@
       border-bottom-right-radius: 6px;
       border-bottom-left-radius: 6px; }
       .modern-timeline > li > .modern-timeline-panel .modern-timeline-body h4 {
-        color: #009688;
+        color: #ffffff;
         margin-bottom: 20px;
         font-size: 1.125rem; }
       .modern-timeline > li > .modern-timeline-panel .modern-timeline-body p {
@@ -380,7 +380,7 @@
       color: #888ea8;
       font-weight: 600; }
       .timeline-alter .item-timeline .t-text p a {
-        color: #009688;
+        color: #ffffff;
         font-weight: 600; }
 
 /*
@@ -470,7 +470,7 @@
       color: #888ea8;
       font-weight: 600; }
       .timeline-line .item-timeline .t-text p a {
-        color: #009688;
+        color: #ffffff;
         font-weight: 600; }
   .timeline-line .item-timeline .t-time {
     margin: 0;

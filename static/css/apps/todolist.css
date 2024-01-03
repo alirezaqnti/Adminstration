@@ -44,7 +44,7 @@
     .new-control.new-checkbox > input:checked ~ span.new-control-indicator:after {
       display: block; }
   .new-control.new-checkbox span.new-control-indicator:after {
-    border: solid #009688;
+    border: solid #ffffff;
     top: 50%;
     right: 50%;
     margin-right: -2px;
@@ -58,7 +58,7 @@
     display: none; }
   .new-control.new-checkbox.checkbox-primary > input:checked ~ span.new-control-indicator {
     background: transparent;
-    border: 2px solid #009688; }
+    border: 2px solid #ffffff; }
 
 .mail-box-container {
   position: relative;
@@ -105,7 +105,7 @@
     color: #191e3a;
     bottom: 32px;
     right: 17%;
-    background-color: #009688;
+    background-color: #ffffff;
     box-shadow: none; }
     .tab-title #addTask svg {
       margin-left: 5px; }
@@ -124,7 +124,7 @@
   .tab-title .nav-pills .nav-link.active {
     background-color: transparent;
     color: #191e3a;
-    background: #009688;
+    background: #ffffff;
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
     padding: 10px 14px 10px 12px; }
@@ -197,7 +197,7 @@
       background: transparent;
       border-radius: 0;
       box-shadow: none;
-      color: #009688;
+      color: #ffffff;
       box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2); }
   .todo-inbox .mail-menu {
     margin: 7px 13px 7px 13px;
@@ -340,7 +340,7 @@
     background: #1b2e4b;
     border-radius: 5px;
     opacity: 1;
-    color: #009688;
+    color: #ffffff;
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2);
     cursor: pointer;
     transition: .600s; }
@@ -396,7 +396,7 @@
   align-self: center;
   font-size: 19px;
   margin-left: 14px;
-  color: #009688;
+  color: #ffffff;
   font-weight: 600; }
 
 .compose-box .compose-content form #taskdescription {
@@ -427,10 +427,10 @@
     border: 1px solid #1b55e2;
     padding: 10px 25px; }
   #addTaskModal .modal-footer .btn.edit-tsk {
-    background-color: #009688;
+    background-color: #ffffff;
     color: #fff;
     font-weight: 600;
-    border: 1px solid #009688;
+    border: 1px solid #ffffff;
     padding: 10px 25px; }
 
 .modal-backdrop {

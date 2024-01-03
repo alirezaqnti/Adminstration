@@ -170,7 +170,7 @@
       border-radius: 50%;
       height: 4px;
       width: 4px;
-      background: #009688;
+      background: #ffffff;
       right: -13px;
       top: 50%; }
     .breadcrumb-four .breadcrumb li a {
@@ -186,10 +186,10 @@
       vertical-align: text-bottom;
       width: 20px; }
     .breadcrumb-four .breadcrumb li.active a {
-      color: #009688 !important;
+      color: #ffffff !important;
       font-weight: 600; }
     .breadcrumb-four .breadcrumb li.active svg {
-      color: #009688; }
+      color: #ffffff; }
     .breadcrumb-four .breadcrumb li span {
       vertical-align: text-bottom; }
 
@@ -213,7 +213,7 @@
       border-radius: 50%;
       height: 4px;
       width: 4px;
-      background: #009688;
+      background: #ffffff;
       right: -13px;
       top: 50%; }
     .breadcrumb-five .breadcrumb li a {
@@ -223,7 +223,7 @@
         text-decoration: none;
         color: #607d8b; }
     .breadcrumb-five .breadcrumb li.active a {
-      color: #009688 !important;
+      color: #ffffff !important;
       font-weight: 600; }
 
 @media (max-width: 575px) {

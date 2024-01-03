@@ -119,7 +119,7 @@ body {
 }
 
 .form-form .form-form-wrap p.signup-link a {
-  color: #009688;
+  color: #ffffff;
   border-bottom: 1px solid;
 }
 
@@ -161,7 +161,7 @@ body {
 
 .form-form .form-form-wrap form .field-wrapper.terms_condition label {
   font-size: 14px;
-  color: #009688;
+  color: #ffffff;
   padding-right: 31px;
   font-weight: 100;
 }
@@ -214,7 +214,7 @@ body {
   width: 100%;
   -ms-transition: all 0.2s ease-in-out 0s;
   transition: all 0.2s ease-in-out 0s;
-  color: #009688;
+  color: #ffffff;
   font-weight: 600;
   font-size: 16px;
   padding: 13px 46px 13px 35px;

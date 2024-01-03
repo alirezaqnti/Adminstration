@@ -234,8 +234,8 @@
     box-shadow: 0 10px 20px -10px #1b55e2;
 }
 .widget.widget-activity-three .timeline-line .item-timeline .t-dot div.t-success {
-    background-color: #009688;
-    box-shadow: 0 10px 20px -10px #009688;
+    background-color: #ffffff;
+    box-shadow: 0 10px 20px -10px #ffffff;
 }
 .widget.widget-activity-three .timeline-line .item-timeline .t-dot div.t-danger {
     background-color: #e7515a;
@@ -356,8 +356,8 @@
 }
 .widget-one_hybrid.widget-engagement .widget-heading .w-icon {
     color: #fff;
-    border: 1px solid #009688;
-    background-color: #009688;
+    border: 1px solid #ffffff;
+    background-color: #ffffff;
 }
 
 /*
@@ -624,7 +624,7 @@
 }
 .widget-card-two .card-bottom-section h5 {
     font-size: 14px;
-    color: #009688;
+    color: #ffffff;
     font-weight: 700;
     margin-bottom: 20px;
 }
@@ -730,7 +730,7 @@
     font-size: 14px;
     font-weight: 700;
     margin-bottom: 4px;
-    color: #009688;
+    color: #ffffff;
 }
 .widget-five .w-content div .task-hight-priority {
     color: #acb0c3;

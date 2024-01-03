@@ -205,7 +205,7 @@
     background: #5c1ac3;
 }
 .widget-three .widget-content .summary-list:nth-child(2) .w-icon {
-    background: #009688;
+    background: #ffffff;
 }
 .widget-three .widget-content .summary-list:nth-child(3) .w-icon {
     background: #e2a03f ;
@@ -405,10 +405,10 @@
     vertical-align: baseline;
 }
 .widget-table-one .transactions-list .t-item .t-rate.rate-inc p {
-    color: #009688;
+    color: #ffffff;
 }
 .widget-table-one .transactions-list .t-item .t-rate.rate-inc svg {
-    color: #009688;
+    color: #ffffff;
 }
 .widget-table-one .transactions-list .t-item .t-rate.rate-dec p {
     color: #e7515a;
@@ -481,7 +481,7 @@
     border-color: rgb(164, 189, 247);
 }
 .widget-activity-four .timeline-line .item-timeline.timeline-success .t-dot:before {
-    background-color: #009688;
+    background-color: #ffffff;
     border-color: rgb(154, 210, 205);
 
 }
@@ -599,7 +599,7 @@
     font-size: 23px;
     font-weight: 700;
     margin-bottom: 0;
-    color: #009688;
+    color: #ffffff;
 }
 .widget-account-invoice-one .invoice-box .inv-detail {
     margin-bottom: 18px;
@@ -766,8 +766,8 @@
     background-color: transparent;
 }
 .widget-table-two .table tr .td-content .outline-badge-success {
-    color: #009688;
-    border-color: #009688;
+    color: #ffffff;
+    border-color: #ffffff;
 }
 [id*="apexcharts-donut-slice-"] {
     filter: none;
@@ -911,8 +911,8 @@
     background: #c2d5ff;
 }
 .widget-table-three .table .td-content .tag-success {
-    color: #009688;
-    border: 1px dashed #009688;
+    color: #ffffff;
+    border: 1px dashed #ffffff;
     background: #e6ffbf;
 }
 .widget-table-three .table .td-content .tag-danger {

@@ -65,7 +65,7 @@ body {
       font-weight: 600;
       color: #0e1726; }
   .hd-header-wrapper .input-group:hover span.input-group-text svg {
-    color: #009688;
+    color: #ffffff;
     fill: rgba(0, 150, 136, 0.270588); }
   .hd-header-wrapper .form-control:focus {
     box-shadow: none;
@@ -119,9 +119,9 @@ body {
         margin-left: 11px;
         color: #888ea8; }
       .hd-tab-section .accordion .card .card-header div > div[aria-expanded="true"] svg {
-        color: #009688; }
+        color: #ffffff; }
   .hd-tab-section .accordion .card:hover .card-header div > div svg {
-    color: #009688; }
+    color: #ffffff; }
   .hd-tab-section .accordion .card:not(:last-child) .card-header div > div {
     border-bottom: none; }
   .hd-tab-section .accordion .card .card-body {
@@ -298,12 +298,12 @@ body {
     #miniFooterWrapper .arrow p {
       align-self: center;
       margin-bottom: 0;
-      color: #009688;
+      color: #ffffff;
       font-weight: 600;
       font-size: 15px;
       letter-spacing: 1px; }
   #miniFooterWrapper .copyright a {
-    color: #009688;
+    color: #ffffff;
     font-weight: 700;
     text-decoration: none; }
 

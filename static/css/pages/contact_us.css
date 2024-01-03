@@ -60,7 +60,7 @@
         .cu-contact-section .contact-form form .input-fields svg {
           position: absolute;
           top: 11px;
-          color: #009688;
+          color: #ffffff;
           width: 20px;
           right: 25px; }
           .cu-contact-section .contact-form form .input-fields svg.feather-mail {
@@ -104,7 +104,7 @@
 
 /*  Contact Content     */
 .new-control.new-radio.radio-success > input:checked ~ span.new-control-indicator {
-  background: #009688 !important; }
+  background: #ffffff !important; }
 
 @media (max-width: 991px) {
   .cu-contact-section .cu-section-header {

@@ -58,7 +58,7 @@ body {
     display: flex; }
     .coming-soon-cont #timer .days, .coming-soon-cont #timer .hours, .coming-soon-cont #timer .min {
       padding: 28px 0;
-      background: #009688;
+      background: #ffffff;
       color: #fff;
       border-radius: 4px;
       font-weight: 600;
@@ -70,7 +70,7 @@ body {
       margin-left: 15px; }
     .coming-soon-cont #timer .sec {
       padding: 28px 0;
-      background: #009688;
+      background: #ffffff;
       color: #fff;
       border-radius: 4px;
       font-weight: 600;
@@ -103,7 +103,7 @@ body {
     .coming-soon-cont .coming-soon-wrap form .field-wrapper svg {
       position: absolute;
       top: 11px;
-      color: #009688;
+      color: #ffffff;
       fill: rgba(0, 150, 136, 0.09);
       right: 8px; }
     .coming-soon-cont .coming-soon-wrap form .field-wrapper input {
@@ -117,13 +117,13 @@ body {
       left: 0;
       padding: 10px 17px;
       border-bottom-right-radius: 20px;
-      background: #009688;
-      border-color: #009688; }
+      background: #ffffff;
+      border-color: #ffffff; }
       .coming-soon-cont .coming-soon-wrap form .field-wrapper button.btn:hover {
         transform: none; }
   .coming-soon-cont .social {
     text-align: center;
-    color: #009688;
+    color: #ffffff;
     margin: 45px 0 0 0; }
     .coming-soon-cont .social li {
       margin: 0; }
@@ -132,7 +132,7 @@ body {
         padding-left: 10px;
         border-left: 2px solid #3b3f5c; }
     .coming-soon-cont .social svg {
-      color: #009688;
+      color: #ffffff;
       width: 20px;
       height: 20px; }
   .coming-soon-cont .terms-conditions {
@@ -142,7 +142,7 @@ body {
     font-weight: 600;
     margin-top: 70px; }
     .coming-soon-cont .terms-conditions a {
-      color: #009688;
+      color: #ffffff;
       font-weight: 700; }
 
 .coming-soon-image {

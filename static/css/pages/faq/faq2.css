@@ -23,7 +23,7 @@
     text-align: center;
     color: #bfc9d4; }
     .faq .faq-layouting .fq-tab-section h2 span {
-      color: #009688; }
+      color: #ffffff; }
   .faq .faq-layouting .fq-tab-section .accordion .card {
     border: 2px solid #1b2e4b;
     border-radius: 6px;
@@ -37,7 +37,7 @@
         padding: 19px 30px;
         font-weight: 600;
         font-size: 16px;
-        color: #009688;
+        color: #ffffff;
         cursor: pointer; }
         .faq .faq-layouting .fq-tab-section .accordion .card .card-header > div[aria-expanded="true"] {
           border-bottom: 2px solid #1b2e4b; }
@@ -48,14 +48,14 @@
         font-weight: 600;
         letter-spacing: 1px; }
       .faq .faq-layouting .fq-tab-section .accordion .card .card-header div[aria-expanded="true"] .faq-q-title {
-        color: #009688; }
+        color: #ffffff; }
       .faq .faq-layouting .fq-tab-section .accordion .card .card-header div .icons {
         display: inline-block;
         float: left; }
         .faq .faq-layouting .fq-tab-section .accordion .card .card-header div .icons svg {
           color: #888ea8; }
       .faq .faq-layouting .fq-tab-section .accordion .card .card-header div[aria-expanded="true"] .icons svg {
-        color: #009688; }
+        color: #ffffff; }
       .faq .faq-layouting .fq-tab-section .accordion .card .card-header div svg.feather-thumbs-up {
         cursor: pointer;
         vertical-align: bottom;
@@ -64,10 +64,10 @@
         color: #888ea8;
         fill: rgba(0, 23, 55, 0.08); }
     .faq .faq-layouting .fq-tab-section .accordion .card:hover .card-header div svg.feather-thumbs-up {
-      color: #009688;
+      color: #ffffff;
       fill: rgba(27, 85, 226, 0.239216); }
     .faq .faq-layouting .fq-tab-section .accordion .card .card-header div[aria-expanded="true"] svg.feather-thumbs-up {
-      color: #009688;
+      color: #ffffff;
       fill: rgba(27, 85, 226, 0.239216); }
     .faq .faq-layouting .fq-tab-section .accordion .card .card-header div span.faq-like-count {
       font-size: 13px;
@@ -75,7 +75,7 @@
       color: #888ea8;
       fill: rgba(0, 23, 55, 0.08); }
     .faq .faq-layouting .fq-tab-section .accordion .card:hover .card-header div span.faq-like-count, .faq .faq-layouting .fq-tab-section .accordion .card .card-header div[aria-expanded="true"] span.faq-like-count {
-      color: #009688;
+      color: #ffffff;
       fill: rgba(27, 85, 226, 0.239216); }
     .faq .faq-layouting .fq-tab-section .accordion .card .card-body {
       padding: 19px 30px; }

@@ -57,7 +57,7 @@
   content: "";
   height: 2px;
   width: 55px;
-  background: #009688;
+  background: #ffffff;
   border-radius: 50%;
   bottom: 9px;
   right: 15px;
@@ -76,7 +76,7 @@
   font-size: 20px;
   font-weight: 600;
   margin-top: 22px;
-  color: #009688;
+  color: #ffffff;
 }
 
 .user-profile .widget-content-area .user-info-list ul.contacts-block {
@@ -94,7 +94,7 @@
 .user-profile .widget-content-area .user-info-list ul.contacts-block li a {
   font-weight: 600;
   font-size: 15px;
-  color: #009688;
+  color: #888ea8;
 }
 
 .user-profile .widget-content-area .user-info-list ul.contacts-block svg {
@@ -106,7 +106,7 @@
 }
 
 .user-profile .widget-content-area .user-info-list ul.contacts-block li:hover svg {
-  color: #009688;
+  color: #ffffff;
   fill: rgba(27, 85, 226, 0.239216);
 }
 
@@ -152,7 +152,7 @@
   content: "";
   height: 2px;
   width: 47px;
-  background: #009688;
+  background: #ffffff;
   border-radius: 50%;
   bottom: -2px;
   right: 15px;
@@ -211,7 +211,7 @@
   content: "";
   height: 2px;
   width: 30px;
-  background: #009688;
+  background: #ffffff;
   border-radius: 50%;
   bottom: -2px;
   right: 15px;
@@ -278,7 +278,7 @@
   content: "";
   height: 2px;
   width: 97px;
-  background: #009688;
+  background: #ffffff;
   border-radius: 50%;
   bottom: -2px;
   right: 15px;
@@ -290,7 +290,7 @@
 
 .education .widget-content-area .timeline-alter .item-timeline .t-dot {
   position: relative;
-  border-color: #009688;
+  border-color: #ffffff;
   padding: 10px;
 }
 
@@ -402,7 +402,7 @@
   content: "";
   height: 2px;
   width: 173px;
-  background: #009688;
+  background: #ffffff;
   border-radius: 50%;
   bottom: -2px;
   right: 15px;
@@ -414,7 +414,7 @@
 
 .work-experience .widget-content-area .timeline-alter .item-timeline .t-dot {
   position: relative;
-  border-color: #009688;
+  border-color: #ffffff;
   padding: 10px;
 }
 

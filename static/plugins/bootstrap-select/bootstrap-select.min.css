@@ -18,7 +18,7 @@ select.bs-select-hidden, select.selectpicker {
   .bootstrap-select.btn-group > .dropdown-toggle {
     height: auto;
     border: 1px solid #1b2e4b;
-    color: #009688;
+    color: #ffffff;
     font-size: 15px;
     padding: 8px 10px;
     letter-spacing: 1px;
@@ -135,7 +135,7 @@ select.bs-select-hidden, select.selectpicker {
 .bootstrap-select.btn-group .dropdown-toggle:not(.custom-styling) .filter-option {
   display: inline-block;
   text-align: right;
-  color: #009688; }
+  color: #ffffff; }
 
 .bootstrap-select.btn-group .dropdown-toggle .caret {
   position: absolute;
@@ -143,7 +143,7 @@ select.bs-select-hidden, select.selectpicker {
   left: 12px;
   margin-top: -2px;
   vertical-align: middle;
-  border-top-color: #009688; }
+  border-top-color: #ffffff; }
 
 .bootstrap-select.btn-group .dropdown-toggle:after {
   display: none; }

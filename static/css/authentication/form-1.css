@@ -61,14 +61,14 @@ body {
       color: #bfc9d4;
       margin-bottom: 0; }
   .form-form .form-form-wrap h1 .brand-name {
-    color: #009688;
+    color: #ffffff;
     font-weight: 600; }
   .form-form .form-form-wrap p.signup-link {
     font-size: 14px;
     color: #e0e6ed;
     margin-bottom: 50px; }
     .form-form .form-form-wrap p.signup-link a {
-      color: #009688;
+      color: #ffffff;
       border-bottom: 1px solid; }
   .form-form .form-form-wrap form .field-wrapper.input {
     position: relative;
@@ -86,7 +86,7 @@ body {
   .form-form .form-form-wrap form .field-wrapper svg {
     position: absolute;
     top: 13px;
-    color: #009688;
+    color: #ffffff;
     fill: rgba(33, 150, 243, 0.109804); }
   .form-form .form-form-wrap form .field-wrapper.terms_condition {
     margin-bottom: 20px; }
@@ -96,7 +96,7 @@ body {
       padding-right: 31px;
       font-weight: 100; }
     .form-form .form-form-wrap form .field-wrapper.terms_condition a {
-      color: #009688; }
+      color: #ffffff; }
   .form-form .form-form-wrap form .field-wrapper input {
     display: inline-block;
     vertical-align: middle;
@@ -109,7 +109,7 @@ body {
     border: none;
     -ms-transition: all 0.2s ease-in-out 0s;
     transition: all 0.2s ease-in-out 0s;
-    color: #009688;
+    color: #ffffff;
     font-size: 16px;
     border-bottom: 1px solid #191e3a;
     padding: 0px 35px 10px 0; }
@@ -117,7 +117,7 @@ body {
       color: #d3d3d3;
       font-size: 14px; }
     .form-form .form-form-wrap form .field-wrapper input:focus {
-      border-bottom: 1px solid #009688;
+      border-bottom: 1px solid #ffffff;
       box-shadow: none; }
   .form-form .form-form-wrap form .field-wrapper.toggle-pass {
     align-self: center;
@@ -130,7 +130,7 @@ body {
     align-self: center; }
   .form-form .form-form-wrap form .field-wrapper a.forgot-pass-link {
     width: 100%;
-    color: #009688;
+    color: #ffffff;
     text-align: center;
     display: block;
     letter-spacing: 2px;
@@ -156,7 +156,7 @@ body {
     font-weight: 600;
     margin-top: 90px; }
     .form-form .terms-conditions a {
-      color: #009688; }
+      color: #ffffff; }
 
 .form-image {
   display: -webkit-box;

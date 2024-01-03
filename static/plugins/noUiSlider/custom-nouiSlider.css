@@ -28,13 +28,13 @@
   display: none; }
 
 .noUi-connect {
-  background: #009688; }
+  background: #ffffff; }
 
 .noUi-tooltip {
   border: 1px solid #191e3a;
   border-radius: 8px;
   background: #191e3a;
-  color: #009688;
+  color: #ffffff;
   padding: 6px 14px;
   font-size: 13px;
   font-weight: 600;
@@ -46,12 +46,12 @@
 .example-val {
   font-weight: 700;
   font-size: 14px;
-  color: #009688; }
+  color: #ffffff; }
   .example-val span.precentage-val {
     display: inline-block;
     background: #191e3a;
     border-radius: 5px;
-    color: #009688;
+    color: #ffffff;
     border: 1px solid #191e3a;
     padding: 4px 6px;
     font-size: 14px; }

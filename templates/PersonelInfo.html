@@ -4,7 +4,8 @@
 
 {% block head %}
 <link href="{% static 'css/users/user-profile.css' %}" rel="stylesheet" type="text/css" />
-
+<link rel="stylesheet" type="text/css" href="{% static 'plugins/dropify/dropify.min.css' %}">
+<link href="{% static 'css/users/account-setting.css' %}" rel="stylesheet" type="text/css" />
 {% endblock head %}
 
 
@@ -23,7 +24,8 @@
                     <div class="widget-content widget-content-area">
                         <div class="d-flex justify-content-between">
                             <h3 class="">پروفایل</h3>
-                            <a href="javascript:void(0)" data-target="#" data-toggle="modal" class="mt-2 edit-profile">
+                            <a href="javascript:void(0)" data-target="#ProfileModal" data-toggle="modal"
+                                class="mt-2 edit-profile">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                     stroke-linejoin="round" class="feather feather-edit-3">
@@ -32,7 +34,13 @@
                                 </svg></a>
                         </div>
                         <div class="text-center user-info">
+
+                            {% if Person.Picture != '0' %}
                             <img src="{{ MEDIA_URL }}{{Person.Picture}}" alt="avatar">
+                            {% else %}
+                            <img src="{{ MEDIA_URL }}img/user.png" alt="avatar">
+                            {% endif %}
+
                             <p class="">{{Person.get_full_name}}</p>
                         </div>
                         <div class="user-info-list">
@@ -346,11 +354,190 @@
         </div>
     </div>
 </div>
+<!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="ProfileModal" tabindex="-1" role="dialog" aria-labelledby="ProfileModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">ویرایش پروفایل</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form action="" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="modal-body">
+                    <div class="col-lg-11 mx-auto">
+                        <div class="row">
+                            <div class="col-xl-4 col-lg-12 col-md-4">
+                                <div class="upload mt-4 pr-md-4">
+
+                                    {% if Person.Picture != '0' %}
+                                    <input type="file" id="input-file-max-fs" class="dropify"
+                                        data-default-file="{{ MEDIA_URL }}{{Person.Picture}}" data-max-file-size="2M" />
+                                    {% else %}
+                                    <input type="file" id="input-file-max-fs" class="dropify"
+                                        data-default-file="{{ MEDIA_URL }}img/user.png" data-max-file-size="2M" />
+
+                                    {% endif %}
+
+                                    <p class="mt-2"><i class="flaticon-cloud-upload mr-1"></i> آپلود عکس</p>
+                                </div>
+                            </div>
+                            <div class="col-xl-8 col-lg-12 col-md-8 mt-md-0 mt-4">
+                                <div class="col-sm-12">
+                                    <div class="row">
+                                        <div class="col-12 col-md-6">
+                                            <div class="form-group">
+                                                <label for="FirstName">نام:</label>
+                                                <input type="text" class="form-control mb-4" id="FirstName"
+                                                    placeholder="نام:" value="{{Person.first_name}}">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-6">
+                                            <div class="form-group">
+                                                <label for="LastName">نام خانوادگی:</label>
+                                                <input type="text" class="form-control mb-4" id="LastName"
+                                                    placeholder="نام خانوادگی:" value="{{Person.last_name}}">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <label class="dob-input">تاریخ تولد</label>
+                                    <div class="d-sm-flex d-block">
+                                        <div class="form-group mr-1">
+                                            <select class="form-control" id="day">
+                                                <option disabled selected>روز</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                                <option value="7">7</option>
+                                                <option value="8">8</option>
+                                                <option value="9">9</option>
+                                                <option value="10">10</option>
+                                                <option value="11">11</option>
+                                                <option value="12">12</option>
+                                                <option value="13">13</option>
+                                                <option value="14">14</option>
+                                                <option value="15">15</option>
+                                                <option value="16">16</option>
+                                                <option value="17">17</option>
+                                                <option value="18">18</option>
+                                                <option value="19">19</option>
+                                                <option value="20">20</option>
+                                                <option value="21">21</option>
+                                                <option value="22">22</option>
+                                                <option value="23">23</option>
+                                                <option value="24">24</option>
+                                                <option value="25">25</option>
+                                                <option value="26">26</option>
+                                                <option value="27">27</option>
+                                                <option value="28">28</option>
+                                                <option value="29">29</option>
+                                                <option value="30">30</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group mr-1">
+                                            <select class="form-control" id="month">
+                                                <option disabled selected>ماه</option>
+                                                <option value="01">فروردین</option>
+                                                <option value="02">اردیبهشت</option>
+                                                <option value="03">خرداد</option>
+                                                <option value="04">تیر</option>
+                                                <option value="05">مرداد</option>
+                                                <option value="06">شهریور</option>
+                                                <option value="07">مهر</option>
+                                                <option value="08">آبان</option>
+                                                <option value="09">آذر</option>
+                                                <option value="10">دی</option>
+                                                <option value="11">بهمن</option>
+                                                <option value="12">اسفند</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group mr-1">
+                                            <select class="form-control" id="year">
+                                                <option disabled selected>سال</option>
+
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+
+                                    <div class="form-group">
+                                        <label for="JobTitle">موقعیت شغلی:</label>
+                                        <input type="text" class="form-control mb-4" id="JobTitle"
+                                            value="{{Person.JobTitle}}">
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+
+                                    <div class="form-group">
+                                        <label for="Phone">شماره همراه:</label>
+                                        <input type="text" class="form-control mb-4" id="Phone"
+                                            value="{{Person.Phone}}">
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+
+                                    <div class="form-group">
+                                        <label for="Email">ایمیل:</label>
+                                        <input type="text" class="form-control mb-4" id="Email"
+                                            value="{{Person.email}}">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">بستن</button>
+                    <button type="button" class="btn btn-primary">ویرایش</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 <!--  END CONTENT AREA  -->
 {% endblock content %}
 
 
 
 {% block js %}
+<script src="{% static 'plugins/dropify/dropify.min.js' %}"></script>
+<script src="{% static 'plugins/blockui/jquery.blockUI.min.js' %}"></script>
+<script src="{% static 'js/users/account-settings.js' %}"></script>
+<script>
+    $(document).ready(function () {
 
+        let today = new Date().toLocaleDateString('fa-IR-u-nu-latn');
+        let Y = today.split('/')
+        Y = parseInt(Y[0])
+        for (let i = 1330; i <= Y; i++) {
+            $('#year').append(`
+            <option value= ${i}>${i}</option>
+            `);
+        }
+
+    });
+    $(document).ready(function () {
+        let Dt = `{{Person.BirthDate}}`
+        Dt = Dt.split('-')
+        let D = Dt[2]
+        let M = Dt[1]
+        let Y = Dt[0]
+        console.log(Y, M, D)
+        $('#day').val(D);
+        $('#month').val(M);
+        $('#year').val(Y);
+    });
+</script>
 {% endblock js %}

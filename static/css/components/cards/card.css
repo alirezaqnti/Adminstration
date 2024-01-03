@@ -303,7 +303,7 @@
     margin-bottom: 5px;
     font-size: 12px;
     font-weight: 600;
-    color: #009688; }
+    color: #ffffff; }
   .component-card_9 .card-title {
     font-size: 15px;
     font-weight: 700;
@@ -356,19 +356,19 @@
   .component-card_9 .meta-likes {
     align-self: center;
     margin-left: 13px;
-    color: #009688; }
+    color: #ffffff; }
     .component-card_9 .meta-likes svg {
       width: 16px;
       vertical-align: sub;
-      color: #009688;
+      color: #ffffff;
       fill: rgba(27, 85, 226, 0.239216); }
   .component-card_9 .meta-view {
     align-self: center;
-    color: #009688; }
+    color: #ffffff; }
     .component-card_9 .meta-view svg {
       width: 16px;
       vertical-align: sub;
-      color: #009688;
+      color: #ffffff;
       fill: rgba(27, 85, 226, 0.239216); }
 
 /*

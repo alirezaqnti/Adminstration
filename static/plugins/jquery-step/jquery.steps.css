@@ -101,12 +101,12 @@
 
 .wizard > .steps .current a {
   background: #060818;
-  color: #009688;
+  color: #ffffff;
   cursor: default;
   /* border-bottom: 2px solid $m-color_14;*/ }
   .wizard > .steps .current a:hover, .wizard > .steps .current a:active {
     background: #060818;
-    color: #009688;
+    color: #ffffff;
     cursor: default;
     /* border-bottom: 2px solid $m-color_14;*/ }
 
@@ -290,10 +290,10 @@
   border-color: #fff; }
 
 .wizard > .steps .last.current.done a {
-  background: #009688;
+  background: #ffffff;
   color: #fff; }
   .wizard > .steps .last.current.done a:hover, .wizard > .steps .last.current.done a:active {
-    background: #009688;
+    background: #ffffff;
     color: #fff; }
 
 .wizard > .actions > ul > li {
@@ -380,23 +380,23 @@
   color: #e0e6ed; }
 
 .circle.wizard > .steps .current:not(.done) a .number, .circle.wizard > .steps .current:not(.done) a:hover .number, .circle.wizard > .steps .current:not(.done) a:active .number {
-  border-color: #009688;
+  border-color: #ffffff;
   background: #060818;
-  color: #009688; }
+  color: #ffffff; }
 
 .circle.wizard > .steps .done a {
   border: none;
   background-color: transparent;
-  color: #009688;
+  color: #ffffff;
   font-weight: 600; }
   .circle.wizard > .steps .done a:hover, .circle.wizard > .steps .done a:active {
     border: none;
     background-color: transparent;
-    color: #009688;
+    color: #ffffff;
     font-weight: 600; }
   .circle.wizard > .steps .done a .number {
     border-color: #191e3a;
-    color: #009688;
+    color: #ffffff;
     background-color: #191e3a; }
 
 .circle.wizard > .steps ul li.done::after, .circle.wizard > .steps ul li.done::before {
@@ -405,11 +405,11 @@
 .circle.wizard > .steps .last.current.done a {
   border: none;
   background-color: transparent;
-  color: #009688; }
+  color: #ffffff; }
   .circle.wizard > .steps .last.current.done a:hover, .circle.wizard > .steps .last.current.done a:active {
     border: none;
     background-color: transparent;
-    color: #009688; }
+    color: #ffffff; }
 
 .wizard > .steps .done a, .classic.wizard > .steps .current a, .wizard > .steps .disabled a {
   cursor: pointer !important; }
@@ -467,28 +467,28 @@
 .pill.wizard > .steps .done a {
   border: 1px solid #191e3a;
   background-color: #191e3a;
-  color: #009688;
+  color: #ffffff;
   font-weight: 700; }
   .pill.wizard > .steps .done a:hover, .pill.wizard > .steps .done a:active {
     border: 1px solid #191e3a;
     background-color: #191e3a;
-    color: #009688;
+    color: #ffffff;
     font-weight: 700; }
   .pill.wizard > .steps .done a .number {
-    border-color: #009688; }
+    border-color: #ffffff; }
 
 .pill.wizard > .steps ul li.done:not(.last)::after, .pill.wizard > .steps ul li.done:not(.last)::before {
-  background-color: #009688; }
+  background-color: #ffffff; }
 
 .pill.wizard > .steps .last.current.done a {
   border: 1px solid #191e3a;
   background-color: #191e3a;
-  color: #009688;
+  color: #ffffff;
   font-weight: 700; }
   .pill.wizard > .steps .last.current.done a:hover, .pill.wizard > .steps .last.current.done a:active {
     border: 1px solid #191e3a;
     background-color: #191e3a;
-    color: #009688;
+    color: #ffffff;
     font-weight: 700; }
 
 /*Circle Vertical*/
@@ -557,7 +557,7 @@
     margin: 0; }
   .circle.vertical.wizard > .steps a .number, .circle.vertical.wizard > .steps a:hover .number, .circle.vertical.wizard > .steps a:active .number {
     border-color: #3b3f5c;
-    background-color: #009688;
+    background-color: #ffffff;
     font-weight: 700;
     position: relative;
     z-index: 10;
@@ -576,10 +576,10 @@
       color: #3b3f5c; }
     .circle.vertical.wizard > .steps .done a .number {
       border-color: #191e3a;
-      color: #009688;
+      color: #ffffff;
       background-color: #191e3a; }
   .circle.vertical.wizard > .steps ul li.done::after, .circle.vertical.wizard > .steps ul li.done::before {
-    background-color: #009688; }
+    background-color: #ffffff; }
   .circle.vertical.wizard > .steps .last.current.done a {
     border: none;
     background-color: transparent;
@@ -654,26 +654,26 @@
   .pills.vertical.wizard > .steps .done a {
     border: 1px solid #191e3a;
     background-color: #191e3a;
-    color: #009688;
+    color: #ffffff;
     font-weight: 700; }
     .pills.vertical.wizard > .steps .done a:hover, .pills.vertical.wizard > .steps .done a:active {
       border: 1px solid #191e3a;
       background-color: #191e3a;
-      color: #009688;
+      color: #ffffff;
       font-weight: 700; }
     .pills.vertical.wizard > .steps .done a .number {
-      border-color: #009688; }
+      border-color: #ffffff; }
   .pills.vertical.wizard > .steps ul li.done:not(.last)::after, .pills.vertical.wizard > .steps ul li.done:not(.last)::before {
-    background-color: #009688; }
+    background-color: #ffffff; }
   .pills.vertical.wizard > .steps .last.current.done a {
     border: 1px solid #191e3a;
     background-color: #191e3a;
-    color: #009688;
+    color: #ffffff;
     font-weight: 700; }
     .pills.vertical.wizard > .steps .last.current.done a:hover, .pills.vertical.wizard > .steps .last.current.done a:active {
       border: 1px solid #191e3a;
       background-color: #191e3a;
-      color: #009688;
+      color: #ffffff;
       font-weight: 700; }
 
 /*For Validation Checkbox */
